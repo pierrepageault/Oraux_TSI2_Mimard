@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercices Oraux TSI2</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --border: #e0ddd6;
+      --text: #1a1916;
+      --muted: #7a7670;
+      --accent: #2d4a3e;
+      --accent-light: #e8f0ec;
+      --tag-bg: #f0ede6;
+      --tag-border: #ccc9c0;
+      --radius: 3px;
+    }
+
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem 2rem;
+      background: var(--surface);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    header p {
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 0.25rem;
+      font-size: 1rem;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* --- Filtres --- */
+    .filters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .filter-group {
+      position: relative;
+    }
+
+    .filter-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .filter-group select,
+    .filter-group input {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      color: var(--text);
+      appearance: none;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .filter-group select:focus,
+    .filter-group input:focus {
+      border-color: var(--accent);
+    }
+
+    .filter-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7670' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.8rem center;
+      padding-right: 2.2rem;
+    }
+
+    /* Autocomplete tags */
+    .tag-input-wrapper {
+      position: relative;
+      grid-column: 1 / -1;
+    }
+
+    .tags-selected {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      min-height: 2.6rem;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: text;
+      transition: border-color 0.15s;
+    }
+
+    .tags-selected:focus-within {
+      border-color: var(--accent);
+    }
+
+    .tag-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: var(--accent-light);
+      border: 1px solid #b8d0c4;
+      color: var(--accent);
+      border-radius: 2px;
+      padding: 0.1rem 0.5rem;
+      font-size: 0.88rem;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .tag-chip button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 1rem;
+      line-height: 1;
+      padding: 0;
+      opacity: 0.6;
+    }
+    .tag-chip button:hover { opacity: 1; }
+
+    #tag-input {
+      border: none;
+      outline: none;
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      color: var(--text);
+      background: transparent;
+      flex: 1;
+      min-width: 120px;
+      padding: 0.1rem 0;
+    }
+
+    .autocomplete-list {
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      z-index: 100;
+      max-height: 260px;
+      overflow-y: auto;
+    }
+
+    .autocomplete-list.hidden { display: none; }
+
+    .autocomplete-item {
+      padding: 0.5rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.1s;
+    }
+
+    .autocomplete-item:hover,
+    .autocomplete-item.active {
+      background: var(--accent-light);
+    }
+
+    .autocomplete-item .item-type {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-left: 0.4rem;
+    }
+
+    /* --- Résultats --- */
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .results-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .exercise-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .exercise-card {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: 0 1.2rem;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .exercise-id {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding-top: 0.15rem;
+      text-align: right;
+    }
+
+    .exercise-body {}
+
+    .exercise-meta {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      margin-bottom: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .exercise-type {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .exercise-year {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .exercise-desc {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .exercise-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .exercise-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--muted);
+      padding: 0.1rem 0.45rem;
+      border-radius: 2px;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 3rem 0;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 3rem 0;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.85rem;
+    }
+
+    .error {
+      background: #fff0f0;
+      border: 1px solid #fcc;
+      border-radius: var(--radius);
+      padding: 1rem;
+      color: #c00;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Exercices Oraux TSI2</h1>
+  <p>Recherchez par tags et type d'épreuve</p>
+</header>
+
+<main>
+  <div id="loading" class="loading">Chargement de la base de données…</div>
+  <div id="error" class="error" style="display:none"></div>
+
+  <div id="app" style="display:none">
+    <div class="filters">
+
+      <!-- Type d'épreuve -->
+      <div class="filter-group">
+        <label for="type-select">Type d'épreuve</label>
+        <select id="type-select">
+          <option value="">Tous</option>
+        </select>
+      </div>
+
+      <!-- Tri -->
+      <div class="filter-group">
+        <label for="sort-select">Trier par</label>
+        <select id="sort-select">
+          <option value="date_desc">Date (récent → ancien)</option>
+          <option value="date_asc">Date (ancien → récent)</option>
+          <option value="id">Numéro</option>
+        </select>
+      </div>
+
+      <!-- Tags avec autocomplétion -->
+      <div class="filter-group tag-input-wrapper">
+        <label>Tags</label>
+        <div class="tags-selected" id="tags-selected" onclick="document.getElementById('tag-input').focus()">
+          <input type="text" id="tag-input" placeholder="Tapez un chapitre ou sous-tag…" autocomplete="off">
+        </div>
+        <div class="autocomplete-list hidden" id="autocomplete-list"></div>
+      </div>
+
+    </div>
+
+    <div class="results-header">
+      <span class="results-count" id="results-count">— exercices</span>
+    </div>
+
+    <div class="exercise-list" id="exercise-list"></div>
+  </div>
+</main>
+
+<script>
+  let db = null;
+  let allTags = [];
+  let selectedTags = [];
+  let activeIndex = -1;
+
+  // Charge la base SQLite
+  async function loadDatabase() {
+    const config = { locateFile: f => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/${f}` };
+    const SQL = await initSqlJs(config);
+
+    const response = await fetch('TSI2_public.db');
+    if (!response.ok) throw new Error(`Impossible de charger la base (${response.status})`);
+
+    const buffer = await response.arrayBuffer();
+    db = new SQL.Database(new Uint8Array(buffer));
+  }
+
+  function query(sql, params = []) {
+    const stmt = db.prepare(sql);
+    stmt.bind(params);
+    const rows = [];
+    while (stmt.step()) rows.push(stmt.getAsObject());
+    stmt.free();
+    return rows;
+  }
+
+  // Initialise les filtres
+  function initFilters() {
+    // Types
+    const types = query("SELECT id_type, nom_epreuve FROM Type ORDER BY nom_epreuve");
+    const sel = document.getElementById('type-select');
+    types.forEach(t => {
+      const opt = document.createElement('option');
+      opt.value = t.id_type;
+      opt.textContent = t.nom_epreuve;
+      sel.appendChild(opt);
+    });
+
+    // Tags pour autocomplétion
+    const chapitres = query("SELECT nom FROM Chapitre ORDER BY nom");
+    const soustags = query(`
+      SELECT c.nom as chapitre, t.nom as soustag
+      FROM TagTheme t
+      JOIN Chapitre c ON t.chapitre = c.id_chapitre
+      WHERE t.nom IS NOT NULL
+      ORDER BY c.nom, t.nom
+    `);
+    allTags = [
+      ...chapitres.map(c => ({ label: c.nom, value: c.nom, type: 'chapitre' })),
+      ...soustags.map(s => ({ label: `${s.chapitre}/${s.soustag}`, value: `${s.chapitre}/${s.soustag}`, type: 'sous-tag' }))
+    ];
+  }
+
+  // Autocomplétion
+  const tagInput = document.getElementById('tag-input');
+  const autocompleteList = document.getElementById('autocomplete-list');
+
+  tagInput.addEventListener('input', () => {
+    const q = tagInput.value.trim().toLowerCase();
+    if (!q) { autocompleteList.classList.add('hidden'); return; }
+
+    const matches = allTags
+      .filter(t => t.label.toLowerCase().includes(q) && !selectedTags.includes(t.value))
+      .slice(0, 12);
+
+    if (!matches.length) { autocompleteList.classList.add('hidden'); return; }
+
+    autocompleteList.innerHTML = matches.map((t, i) =>
+      `<div class="autocomplete-item" data-value="${t.value}" data-idx="${i}">
+        ${t.label}<span class="item-type">${t.type}</span>
+      </div>`
+    ).join('');
+    autocompleteList.classList.remove('hidden');
+    activeIndex = -1;
+
+    autocompleteList.querySelectorAll('.autocomplete-item').forEach(el => {
+      el.addEventListener('mousedown', e => {
+        e.preventDefault();
+        addTag(el.dataset.value);
+      });
+    });
+  });
+
+  tagInput.addEventListener('keydown', e => {
+    const items = autocompleteList.querySelectorAll('.autocomplete-item');
+    if (e.key === 'ArrowDown') {
+      activeIndex = Math.min(activeIndex + 1, items.length - 1);
+      items.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+    } else if (e.key === 'ArrowUp') {
+      activeIndex = Math.max(activeIndex - 1, 0);
+      items.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+    } else if (e.key === 'Enter' && activeIndex >= 0) {
+      e.preventDefault();
+      addTag(items[activeIndex].dataset.value);
+    } else if (e.key === 'Backspace' && !tagInput.value && selectedTags.length) {
+      removeTag(selectedTags[selectedTags.length - 1]);
+    } else if (e.key === 'Escape') {
+      autocompleteList.classList.add('hidden');
+    }
+  });
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.tag-input-wrapper')) {
+      autocompleteList.classList.add('hidden');
+    }
+  });
+
+  function addTag(value) {
+    if (!selectedTags.includes(value)) {
+      selectedTags.push(value);
+      renderTags();
+      search();
+    }
+    tagInput.value = '';
+    autocompleteList.classList.add('hidden');
+    tagInput.focus();
+  }
+
+  function removeTag(value) {
+    selectedTags = selectedTags.filter(t => t !== value);
+    renderTags();
+    search();
+  }
+
+  function renderTags() {
+    const container = document.getElementById('tags-selected');
+    container.querySelectorAll('.tag-chip').forEach(el => el.remove());
+    selectedTags.forEach(tag => {
+      const chip = document.createElement('span');
+      chip.className = 'tag-chip';
+      chip.innerHTML = `${tag}<button onclick="removeTag('${tag.replace(/'/g, "\\'")}')" title="Retirer">×</button>`;
+      container.insertBefore(chip, tagInput);
+    });
+  }
+
+  // Recherche principale
+  function search() {
+    const typeId = document.getElementById('type-select').value;
+    const sort = document.getElementById('sort-select').value;
+
+    let sql, params = [];
+
+    if (selectedTags.length === 0) {
+      sql = `
+        SELECT DISTINCT e.id_ex, e.date, t.nom_epreuve, e.description
+        FROM ExerciceOraux e
+        LEFT JOIN Type t ON e.type = t.id_type
+        WHERE e.utilisé = 'oui'
+        ${typeId ? 'AND e.type = ?' : ''}
+      `;
+      if (typeId) params.push(typeId);
+    } else {
+      // Intersection : l'exercice doit avoir TOUS les tags sélectionnés
+      const tagConditions = selectedTags.map(() => `
+        EXISTS (
+          SELECT 1 FROM ExerciceTag et
+          JOIN TagTheme tt ON et.tag = tt.id_tag
+          JOIN Chapitre c ON tt.chapitre = c.id_chapitre
+          WHERE et.exercice = e.id_ex
+          AND (
+            (tt.nom IS NULL AND c.nom = ?)
+            OR (c.nom || '/' || tt.nom = ?)
+          )
+        )
+      `).join(' AND ');
+
+      sql = `
+        SELECT DISTINCT e.id_ex, e.date, t.nom_epreuve, e.description
+        FROM ExerciceOraux e
+        LEFT JOIN Type t ON e.type = t.id_type
+        WHERE e.utilisé = 'oui'
+        ${typeId ? 'AND e.type = ?' : ''}
+        AND ${tagConditions}
+      `;
+
+      if (typeId) params.push(typeId);
+      selectedTags.forEach(tag => {
+        const parts = tag.split('/');
+        params.push(parts[0]); // pour c.nom
+        params.push(tag);      // pour c.nom || '/' || tt.nom
+      });
+    }
+
+    const orderBy = sort === 'date_asc' ? 'e.date ASC' : sort === 'id' ? 'e.id_ex ASC' : 'e.date DESC';
+    sql += ` ORDER BY ${orderBy}`;
+
+    const results = query(sql, params);
+    renderResults(results);
+  }
+
+  function getTagsForExercice(id_ex) {
+    return query(`
+      SELECT c.nom as chapitre, tt.nom as soustag
+      FROM ExerciceTag et
+      JOIN TagTheme tt ON et.tag = tt.id_tag
+      JOIN Chapitre c ON tt.chapitre = c.id_chapitre
+      WHERE et.exercice = ?
+      ORDER BY c.nom, tt.nom
+    `, [id_ex]);
+  }
+
+  function renderResults(results) {
+    const list = document.getElementById('exercise-list');
+    const count = document.getElementById('results-count');
+
+    count.textContent = `${results.length} exercice${results.length > 1 ? 's' : ''}`;
+    list.innerHTML = '';
+
+    if (!results.length) {
+      list.innerHTML = '<div class="no-results">Aucun exercice ne correspond à ces critères.</div>';
+      return;
+    }
+
+    results.forEach(ex => {
+      const tags = getTagsForExercice(ex.id_ex);
+      const tagHtml = tags.map(t =>
+        `<span class="exercise-tag">${t.chapitre}${t.soustag ? '/' + t.soustag : ''}</span>`
+      ).join('');
+
+      const card = document.createElement('div');
+      card.className = 'exercise-card';
+      card.innerHTML = `
+        <div class="exercise-id">${ex.id_ex}</div>
+        <div class="exercise-body">
+          <div class="exercise-meta">
+            <span class="exercise-type">${ex.nom_epreuve || '—'}</span>
+            <span class="exercise-year">${ex.date || '—'}</span>
+          </div>
+          <div class="exercise-desc">${ex.description || '<em style="color:var(--muted)">Sans description</em>'}</div>
+          <div class="exercise-tags">${tagHtml}</div>
+        </div>
+      `;
+      list.appendChild(card);
+    });
+  }
+
+  // Événements
+  document.getElementById('type-select').addEventListener('change', search);
+  document.getElementById('sort-select').addEventListener('change', search);
+
+  // Initialisation
+  (async () => {
+    try {
+      await loadDatabase();
+      initFilters();
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('app').style.display = 'block';
+      search();
+    } catch (err) {
+      document.getElementById('loading').style.display = 'none';
+      const errEl = document.getElementById('error');
+      errEl.style.display = 'block';
+      errEl.textContent = `Erreur : ${err.message}`;
+    }
+  })();
+</script>
+
+</body>
+</html>
