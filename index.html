@@ -529,8 +529,8 @@
           JOIN Chapitre c ON tt.chapitre = c.id_chapitre
           WHERE et.exercice = e.id_ex
           AND (
-            (tt.nom IS NULL AND c.nom = ?)
-            OR (c.nom || '/' || tt.nom = ?)
+            c.nom = ?                          -- tag = chapitre seul → tous les sous-tags inclus
+            OR c.nom || '/' || tt.nom = ?      -- tag = chapitre/sous-tag exact
           )
         )
       `).join(' AND ');
