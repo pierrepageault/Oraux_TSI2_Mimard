@@ -180,6 +180,2562 @@
         "Séries numériques/critères de comparaison",
         "Séries numériques/sommes partielles"
       ]
+    },
+    {
+      "id": 214,
+      "date": 2025,
+      "type": "CCINP",
+      "description": "Déterminant d'une matrice à paramètres",
+      "tags": [
+        "Bases de la programmation/spécification des fonctions",
+        "Déterminants/définition et unicité",
+        "Déterminants/développement par rapport à une ligne ou colonne",
+        "Déterminants/opérations élémentaires",
+        "Déterminants/propriétés du déterminant",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/valeurs propres"
+      ]
+    },
+    {
+      "id": 215,
+      "date": 2025,
+      "type": "CCS2",
+      "description": "Racine carrée d'une matrice symétrique définie positive",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Espaces préhilbertiens et euclidiens/matrices symétriques réelles",
+        "Espaces préhilbertiens et euclidiens/théorème spectral",
+        "Graphes/dictionnaire d'adjacence",
+        "Graphes/matrice d'adjacence",
+        "Graphes/vocabulaire des graphes",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 216,
+      "date": 2025,
+      "type": "CCS1",
+      "description": "Critère de d'Alembert avec un paramètre",
+      "tags": [
+        "Séries numériques/convergence et divergence",
+        "Séries numériques/règle de d'Alembert"
+      ]
+    },
+    {
+      "id": 217,
+      "date": 2025,
+      "type": "CCS2",
+      "description": "Noyau de Dirichlet et phénomène de Gibbs",
+      "tags": [
+        "Algorithmique numérique/méthode des rectangles",
+        "Algorithmique numérique/tracé de courbes",
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Séries de Fourier/coefficients de Fourier",
+        "Séries de Fourier/série de Fourier"
+      ]
+    },
+    {
+      "id": 218,
+      "date": 2025,
+      "type": "CCS2",
+      "description": "Sous espaces stables d'un endomorphisme de l'espace",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Compléments d'algèbre linéaire/sous-espaces stables",
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 219,
+      "date": 2025,
+      "type": "CCS1",
+      "description": "Équation et fonctions de Bessel",
+      "tags": [
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Séries entières/développements en série entière usuels",
+        "Équations différentielles linéaires/recherche de solutions particulières",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/équation d'ordre 2"
+      ]
+    },
+    {
+      "id": 220,
+      "date": 2025,
+      "type": "CCINP",
+      "description": "Étude d'une série construite à partir d'une suite récurrente linéaire d'ordre 2",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Réduction des endomorphismes/récurrences linéaires d'ordre 2",
+        "Séries entières/exponentielle complexe",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries géométriques"
+      ]
+    },
+    {
+      "id": 221,
+      "date": 2025,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Calcul d'une intégrale",
+      "tags": [
+        "Algorithmique numérique/méthode des rectangles",
+        "Algorithmique numérique/méthode des trapèzes",
+        "Intégration sur un intervalle quelconque/changement de variable"
+      ]
+    },
+    {
+      "id": 222,
+      "date": 2025,
+      "type": "CCINP",
+      "description": "Résolution d'un système linéaire de taille trois et méthode d'Euler",
+      "tags": [
+        "Algorithmique numérique/méthode d'Euler",
+        "Algorithmique numérique/tracé de courbes",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres",
+        "Équations différentielles linéaires/coefficients constants",
+        "Équations différentielles linéaires/systèmes différentiels linéaires",
+        "Équations différentielles linéaires/théorème de structure"
+      ]
+    },
+    {
+      "id": 223,
+      "date": 2025,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Une CS de diagonalisabilité à l'aide de la trace et du déterminant",
+      "tags": [
+        "Compléments d'algèbre linéaire/trace",
+        "Réduction des endomorphismes/condition suffisante de diagonalisabilité",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique"
+      ]
+    },
+    {
+      "id": 224,
+      "date": 2025,
+      "type": "CCINP",
+      "description": "Calcul d'une intégrale à paramètre",
+      "tags": [
+        "Algorithmique numérique/méthode des rectangles",
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales généralisées"
+      ]
+    },
+    {
+      "id": 225,
+      "date": 2025,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Matrices symétriques nilpotentes, idempotentes",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Espaces préhilbertiens et euclidiens/matrices symétriques réelles",
+        "Espaces préhilbertiens et euclidiens/théorème spectral",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 226,
+      "date": 2025,
+      "type": "CCS2",
+      "description": "Factorisation d'un polynôme sur R et sur C et calcul d'un produit",
+      "tags": [
+        "Bases de la programmation/jeu de tests",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/valeurs propres",
+        "Séries entières/exponentielle complexe"
+      ]
+    },
+    {
+      "id": 196,
+      "date": 2024,
+      "type": "CCS1",
+      "description": "Limite d'une intégrale I_n",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young",
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/séries à termes positifs"
+      ]
+    },
+    {
+      "id": 197,
+      "date": 2024,
+      "type": "CCS2",
+      "description": "Covariance et loi conditionnée",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Probabilités/covariance",
+        "Probabilités/espérance",
+        "Probabilités/loi binomiale",
+        "Probabilités/loi conditionnelle",
+        "Probabilités/loi de Poisson",
+        "Probabilités/variables aléatoires indépendantes",
+        "Probabilités/variance"
+      ]
+    },
+    {
+      "id": 198,
+      "date": 2024,
+      "type": "CCINP",
+      "description": "Symétrie orthogonale de R[X]",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Compléments d'algèbre linéaire/projecteurs",
+        "Compléments d'algèbre linéaire/symétries",
+        "Déterminants/déterminant d'un endomorphisme",
+        "Espaces préhilbertiens et euclidiens/algorithme de Gram-Schmidt",
+        "Espaces préhilbertiens et euclidiens/famille orthonormée",
+        "Espaces préhilbertiens et euclidiens/groupe orthogonal",
+        "Espaces préhilbertiens et euclidiens/isométries vectorielles",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Espaces préhilbertiens et euclidiens/norme",
+        "Espaces préhilbertiens et euclidiens/produit scalaire"
+      ]
+    },
+    {
+      "id": 199,
+      "date": 2024,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Série géométrique de sinus carrés",
+      "tags": [
+        "Séries numériques/convergence et divergence",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries géométriques"
+      ]
+    },
+    {
+      "id": 200,
+      "date": 2024,
+      "type": "CCS1",
+      "description": "Nature et calcul d'une intégrale généralisée",
+      "tags": [
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Intégration sur un intervalle quelconque/intégration par parties"
+      ]
+    },
+    {
+      "id": 201,
+      "date": 2024,
+      "type": "CCINP",
+      "description": "Système trigonalisable de suites récurrentes linéaires d'ordre 1",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/récurrences linéaires d'ordre 2",
+        "Réduction des endomorphismes/trigonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 202,
+      "date": 2024,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Calcul d'une intégrale classique",
+      "tags": [
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales classiques",
+        "Intégration sur un intervalle quelconque/intégration par parties"
+      ]
+    },
+    {
+      "id": 203,
+      "date": 2024,
+      "type": "CCINP",
+      "description": "Déterminant d'une matrice tridiagonale",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Déterminants/définition et unicité",
+        "Déterminants/développement par rapport à une ligne ou colonne",
+        "Réduction des endomorphismes/polynôme caractéristique"
+      ]
+    },
+    {
+      "id": 204,
+      "date": 2024,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Calcul d'une limite",
+      "tags": [
+        "Séries entières/rayon de convergence",
+        "Séries entières/règle de d'Alembert"
+      ]
+    },
+    {
+      "id": 205,
+      "date": 2024,
+      "type": "CCS2",
+      "description": "Calcul d'une intégrale à partir de zeta(2) ",
+      "tags": [
+        "Algorithmique numérique/méthode des rectangles",
+        "Algorithmique numérique/tracé de courbes",
+        "Fonctions de plusieurs variables/limite et continuité",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries de Riemann"
+      ]
+    },
+    {
+      "id": 206,
+      "date": 2024,
+      "type": "CCS1",
+      "description": "Étude d'un point selle à l'aide d'un DL",
+      "tags": [
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 1",
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 2",
+        "Fonctions de plusieurs variables/extremums sur un ouvert",
+        "Fonctions de plusieurs variables/gradient",
+        "Fonctions de plusieurs variables/point critique"
+      ]
+    },
+    {
+      "id": 207,
+      "date": 2024,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Approximation de Padé",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young",
+        "Séries entières/développements en série entière usuels"
+      ]
+    },
+    {
+      "id": 208,
+      "date": 2024,
+      "type": "CCINP",
+      "description": "Produit scalaire canonique sur M_2(R)",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Compléments d'algèbre linéaire/trace",
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/distance à un sous-espace",
+        "Espaces préhilbertiens et euclidiens/norme",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale"
+      ]
+    },
+    {
+      "id": 209,
+      "date": 2024,
+      "type": "CCINP",
+      "description": "",
+      "tags": [
+        "Algorithmique numérique/tracé de courbes",
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/longueur d'un arc",
+        "Fonctions vectorielles et courbes paramétrées/point régulier",
+        "Fonctions vectorielles et courbes paramétrées/point stationnaire",
+        "Fonctions vectorielles et courbes paramétrées/réduction du domaine d'étude et symétries",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
+    },
+    {
+      "id": 210,
+      "date": 2024,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Factorisation d'un polynôme sur C, racines n ème",
+      "tags": [
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Séries entières/exponentielle complexe"
+      ]
+    },
+    {
+      "id": 211,
+      "date": 2024,
+      "type": "CCS1",
+      "description": "Loi binomiale",
+      "tags": [
+        "Probabilités/espérance",
+        "Probabilités/loi binomiale",
+        "Probabilités/variance"
+      ]
+    },
+    {
+      "id": 167,
+      "date": 2023,
+      "type": "CCINP",
+      "description": "Equivalent d'une somme partielle à l'aide d'intégrales",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Bases de la programmation/fonctions récursives",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Séries numériques/comparaison série-intégrale",
+        "Séries numériques/convergence et divergence",
+        "Séries numériques/sommes partielles"
+      ]
+    },
+    {
+      "id": 168,
+      "date": 2023,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "CNS pour définir un produit scalaire",
+      "tags": [
+        "Espaces préhilbertiens et euclidiens/inégalité de Cauchy-Schwarz",
+        "Espaces préhilbertiens et euclidiens/norme",
+        "Espaces préhilbertiens et euclidiens/produit scalaire"
+      ]
+    },
+    {
+      "id": 170,
+      "date": 2023,
+      "type": "CCS1",
+      "description": "Réduction d'une matrice à paramètre",
+      "tags": [
+        "Déterminants/définition et unicité",
+        "Déterminants/propriétés du déterminant",
+        "Réduction des endomorphismes/condition nécessaire et suffisante de diagonalisabilité",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/trigonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 171,
+      "date": 2023,
+      "type": "CCS2",
+      "description": "Exponentiel d'une matrice trigonalisable",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/valeurs propres",
+        "Séries entières/développements en série entière usuels",
+        "Séries entières/somme d'une série entière",
+        "Équations différentielles linéaires/systèmes différentiels linéaires"
+      ]
+    },
+    {
+      "id": 172,
+      "date": 2023,
+      "type": "CCINP",
+      "description": "Dénombrement",
+      "tags": [
+        "Bases de la programmation/jeu de tests",
+        "Probabilités/loi binomiale"
+      ]
+    },
+    {
+      "id": 173,
+      "date": 2023,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "DL, formule du capitaine",
+      "tags": [
+        "Séries entières/développements en série entière usuels"
+      ]
+    },
+    {
+      "id": 174,
+      "date": 2023,
+      "type": "CCS2",
+      "description": "Wallis et calcul de série",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/série telescopique"
+      ]
+    },
+    {
+      "id": 175,
+      "date": 2023,
+      "type": "CCS1",
+      "description": "Géométrie du plan, nombres complexes",
+      "tags": [
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale"
+      ]
+    },
+    {
+      "id": 176,
+      "date": 2023,
+      "type": "CCINP",
+      "description": "Puissance d'une matrice à paramètre",
+      "tags": [
+        "Bases de la programmation/spécification des fonctions",
+        "Compléments d'algèbre linéaire/somme directe",
+        "Compléments d'algèbre linéaire/sous-espaces stables",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 177,
+      "date": 2023,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Calcul de la somme d'une série telescopique",
+      "tags": [
+        "Séries numériques/sommes partielles",
+        "Séries numériques/série telescopique"
+      ]
+    },
+    {
+      "id": 178,
+      "date": 2023,
+      "type": "CCS1",
+      "description": "Réduction d'endomorphismes matriciels",
+      "tags": [
+        "Compléments d'algèbre linéaire/trace",
+        "Compléments d'algèbre linéaire/transposée",
+        "Déterminants/déterminant d'un endomorphisme",
+        "Réduction des endomorphismes/diagonalisation"
+      ]
+    },
+    {
+      "id": 179,
+      "date": 2023,
+      "type": "CCS1",
+      "description": "Matrice nilpotente",
+      "tags": [
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres"
+      ]
+    },
+    {
+      "id": 180,
+      "date": 2023,
+      "type": "CCS2",
+      "description": "Intégrales de Wallis",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Bases de la programmation/jeu de tests",
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales partielles",
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/sommes partielles"
+      ]
+    },
+    {
+      "id": 181,
+      "date": 2023,
+      "type": "CCINP",
+      "description": "Déterminant de Vandermonde",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Compléments d'algèbre linéaire/familles dénombrables",
+        "Déterminants/caractérisation des automorphismes",
+        "Déterminants/définition et unicité",
+        "Déterminants/déterminant d'un endomorphisme",
+        "Déterminants/déterminant d'un produit",
+        "Déterminants/propriétés du déterminant"
+      ]
+    },
+    {
+      "id": 182,
+      "date": 2023,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Developpement asymptotique d'une intégrale",
+      "tags": [
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/critères de comparaison",
+        "Intégration sur un intervalle quelconque/intégration par parties"
+      ]
+    },
+    {
+      "id": 183,
+      "date": 2023,
+      "type": "CCINP",
+      "description": "Etude d'un projecteur orthogonal",
+      "tags": [
+        "Compléments d'algèbre linéaire/projecteurs",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 184,
+      "date": 2023,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Calcul d'une limite",
+      "tags": [
+        "Séries entières/rayon de convergence",
+        "Séries numériques/règle de d'Alembert"
+      ]
+    },
+    {
+      "id": 185,
+      "date": 2023,
+      "type": "CCS1",
+      "description": "Un beau point de rebroussement",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/point de rebroussement",
+        "Fonctions vectorielles et courbes paramétrées/point régulier",
+        "Fonctions vectorielles et courbes paramétrées/point stationnaire",
+        "Fonctions vectorielles et courbes paramétrées/réduction du domaine d'étude et symétries",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
+    },
+    {
+      "id": 186,
+      "date": 2023,
+      "type": "CCINP",
+      "description": "L'astroide",
+      "tags": [
+        "Algorithmique numérique/tracé de courbes",
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young",
+        "Fonctions vectorielles et courbes paramétrées/longueur d'un arc",
+        "Fonctions vectorielles et courbes paramétrées/point stationnaire",
+        "Fonctions vectorielles et courbes paramétrées/réduction du domaine d'étude et symétries",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
+    },
+    {
+      "id": 143,
+      "date": 2022,
+      "type": "CCS1",
+      "description": "Loi du rang et de la trace d'une matrice aléatoire",
+      "tags": [
+        "Compléments d'algèbre linéaire/projecteurs",
+        "Compléments d'algèbre linéaire/trace",
+        "Probabilités/espérance",
+        "Probabilités/loi de Bernoulli",
+        "Probabilités/variables aléatoires indépendantes"
+      ]
+    },
+    {
+      "id": 151,
+      "date": 2022,
+      "type": "CCS1",
+      "description": "Loi binomiale négative (temps d’attente du deuxième succès)",
+      "tags": [
+        "Probabilités/espérance",
+        "Probabilités/loi conjointe",
+        "Probabilités/loi géométrique",
+        "Séries entières/dérivation terme à terme",
+        "Séries entières/rayon de convergence",
+        "Séries entières/somme d'une série entière",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/sommes partielles"
+      ]
+    },
+    {
+      "id": 152,
+      "date": 2022,
+      "type": "CCS2",
+      "description": "Développement limité d'une fonction réciproque",
+      "tags": [
+        "Algorithmique numérique/dichotomie",
+        "Algorithmique numérique/tracé de courbes",
+        "Bases de la programmation/algorithmes dichotomiques",
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young"
+      ]
+    },
+    {
+      "id": 153,
+      "date": 2022,
+      "type": "CCINP",
+      "description": "produit scalaire sur l^2(N)",
+      "tags": [
+        "Compléments d'algèbre linéaire/somme de sous-espaces vectoriels",
+        "Espaces préhilbertiens et euclidiens/norme",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/séries à termes positifs"
+      ]
+    },
+    {
+      "id": 154,
+      "date": 2022,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Déterminant d’un endomorphisme du R-espace vectoriel C",
+      "tags": [
+        "Compléments d'algèbre linéaire/familles dénombrables",
+        "Déterminants/déterminant d'un endomorphisme"
+      ]
+    },
+    {
+      "id": 155,
+      "date": 2022,
+      "type": "CCINP",
+      "description": "Produit scalaire canonique de M_2(R)",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Compléments d'algèbre linéaire/trace",
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/distance à un sous-espace",
+        "Espaces préhilbertiens et euclidiens/norme",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale"
+      ]
+    },
+    {
+      "id": 156,
+      "date": 2022,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Calcul d’une intégrale en cosinus hyperbolique",
+      "tags": [
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales classiques"
+      ]
+    },
+    {
+      "id": 157,
+      "date": 2022,
+      "type": "CCS1",
+      "description": "Etude de la courbe (cos(3t),sin(2t))",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/point régulier",
+        "Fonctions vectorielles et courbes paramétrées/réduction du domaine d'étude et symétries",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
+    },
+    {
+      "id": 158,
+      "date": 2022,
+      "type": "CCS2",
+      "description": "Etude des extrema locaux d’une fonction polynomiale à l’aide de DL",
+      "tags": [
+        "Algorithmique numérique/tracé de courbes",
+        "Fonctions de plusieurs variables/extremums sur un ouvert",
+        "Fonctions de plusieurs variables/point critique",
+        "Fonctions de plusieurs variables/surfaces"
+      ]
+    },
+    {
+      "id": 159,
+      "date": 2022,
+      "type": "CCS2",
+      "description": "Tracer de la fonction de répartition d’une loi uniforme",
+      "tags": [
+        "Algorithmique numérique/tracé de courbes",
+        "Probabilités/loi de Bernoulli"
+      ]
+    },
+    {
+      "id": 160,
+      "date": 2022,
+      "type": "CCS1",
+      "description": "Matrice d’une projection orthogonale et d’une rotation de R³",
+      "tags": [
+        "Compléments d'algèbre linéaire/projecteurs",
+        "Espaces préhilbertiens et euclidiens/isométries vectorielles",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale"
+      ]
+    },
+    {
+      "id": 161,
+      "date": 2022,
+      "type": "CCS1",
+      "description": "Résolution d’une EDP en coordonnées polaires",
+      "tags": [
+        "Fonctions de plusieurs variables/classe C1",
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 1",
+        "Fonctions de plusieurs variables/équations aux dérivées partielles"
+      ]
+    },
+    {
+      "id": 163,
+      "date": 2022,
+      "type": "CCS1",
+      "description": "Le paramétrage n’est pas donné (géométrie du triangle)",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/point régulier",
+        "Fonctions vectorielles et courbes paramétrées/réduction du domaine d'étude et symétries",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
+    },
+    {
+      "id": 97,
+      "date": 2021,
+      "type": "CCS2",
+      "description": "Chaine de Markov en dimension 2",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Algorithmique numérique/tracé de courbes",
+        "Probabilités/formule de Bayes",
+        "Probabilités/formule des probabilités totales",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 98,
+      "date": 2021,
+      "type": "CCS1",
+      "description": "Matrice normale satisfaisant M^2 = -Id",
+      "tags": [
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/groupe orthogonal",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Réduction des endomorphismes/spectre",
+        "Réduction des endomorphismes/valeurs propres"
+      ]
+    },
+    {
+      "id": 99,
+      "date": 2021,
+      "type": "CCINP",
+      "description": "Fonction dilogarithme",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young",
+        "Séries entières/dérivation terme à terme",
+        "Séries entières/développements en série entière usuels"
+      ]
+    },
+    {
+      "id": 100,
+      "date": 2021,
+      "type": "CCS1",
+      "description": "Développement en série entière de (1+x)^\u0007lpha",
+      "tags": [
+        "Séries entières/développements en série entière usuels",
+        "Séries entières/somme d'une série entière",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/variation de la constante",
+        "Équations différentielles linéaires/équation d'ordre 1"
+      ]
+    },
+    {
+      "id": 101,
+      "date": 2021,
+      "type": "CCS1",
+      "description": "Intégrale de Dirichlet",
+      "tags": [
+        "Intégration sur un intervalle quelconque/convergence absolue",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Intégration sur un intervalle quelconque/intégration par parties"
+      ]
+    },
+    {
+      "id": 102,
+      "date": 2021,
+      "type": "CCINP",
+      "description": "Suite récurrente linéaire d'ordre 2 à coefficients constants",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Réduction des endomorphismes/récurrences linéaires d'ordre 2",
+        "Séries entières/exponentielle complexe"
+      ]
+    },
+    {
+      "id": 103,
+      "date": 2021,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Fractions rationnelles en t",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/point régulier",
+        "Fonctions vectorielles et courbes paramétrées/point stationnaire",
+        "Fonctions vectorielles et courbes paramétrées/réduction du domaine d'étude et symétries",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
+    },
+    {
+      "id": 104,
+      "date": 2021,
+      "type": "CCINP",
+      "description": "Équivalent des sommes partielles d'une série de Riemann, suites adjacentes",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Séries numériques/comparaison série-intégrale",
+        "Séries numériques/convergence et divergence",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries de Riemann"
+      ]
+    },
+    {
+      "id": 105,
+      "date": 2021,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Maximum et minimum de deux lois géométriques",
+      "tags": [
+        "Probabilités/espérance",
+        "Probabilités/loi géométrique",
+        "Probabilités/variables aléatoires indépendantes"
+      ]
+    },
+    {
+      "id": 107,
+      "date": 2021,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Calcul d'un développement limité à l'ordre 100",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young",
+        "Séries entières/développements en série entière usuels",
+        "Séries entières/somme d'une série entière"
+      ]
+    },
+    {
+      "id": 108,
+      "date": 2021,
+      "type": "CCS2",
+      "description": "Produit scalaire canonique de M_3(R), isométrie",
+      "tags": [
+        "Compléments d'algèbre linéaire/projecteurs",
+        "Compléments d'algèbre linéaire/trace",
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/classification en dimensions 2 et 3",
+        "Espaces préhilbertiens et euclidiens/distance à un sous-espace",
+        "Espaces préhilbertiens et euclidiens/famille orthonormée",
+        "Espaces préhilbertiens et euclidiens/groupe orthogonal",
+        "Espaces préhilbertiens et euclidiens/isométries vectorielles",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Espaces préhilbertiens et euclidiens/norme",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 109,
+      "date": 2021,
+      "type": "CCS2",
+      "description": "Méthode de la dichotomie sur un polynôme de degré 3",
+      "tags": [
+        "Algorithmique numérique/dichotomie",
+        "Algorithmique numérique/tracé de courbes"
+      ]
+    },
+    {
+      "id": 110,
+      "date": 2021,
+      "type": "CCINP",
+      "description": "Nature d'un point critique et position locale",
+      "tags": [
+        "Fonctions de plusieurs variables/classe C1",
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 1",
+        "Fonctions de plusieurs variables/extremums sur un ouvert",
+        "Fonctions de plusieurs variables/gradient",
+        "Fonctions de plusieurs variables/plan tangent",
+        "Fonctions de plusieurs variables/point critique",
+        "Fonctions de plusieurs variables/surfaces"
+      ]
+    },
+    {
+      "id": 111,
+      "date": 2021,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Fonctions rationnelles en t",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/point régulier",
+        "Fonctions vectorielles et courbes paramétrées/point stationnaire",
+        "Fonctions vectorielles et courbes paramétrées/réduction du domaine d'étude et symétries",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
+    },
+    {
+      "id": 113,
+      "date": 2021,
+      "type": "CCS1",
+      "description": "Étude d'une anti-rotation",
+      "tags": [
+        "Espaces préhilbertiens et euclidiens/isométries vectorielles",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 114,
+      "date": 2021,
+      "type": "CCS2",
+      "description": "Démonstration du critère des séries alternées",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Algorithmique numérique/tracé de courbes",
+        "Bases de la programmation/spécification des fonctions",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries alternées"
+      ]
+    },
+    {
+      "id": 115,
+      "date": 2021,
+      "type": "CCS2",
+      "description": "Etude qualitative des solution d'une EDO d'ordre 1 à paramètre",
+      "tags": [
+        "Algorithmique numérique/méthode d'Euler",
+        "Algorithmique numérique/tracé de courbes",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/critères de comparaison",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/variation de la constante",
+        "Équations différentielles linéaires/équation d'ordre 1"
+      ]
+    },
+    {
+      "id": 116,
+      "date": 2021,
+      "type": "CCINP",
+      "description": "Anti-commutant d'une matrice 3x3",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 117,
+      "date": 2021,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Extremum sur un ouvert de R^2",
+      "tags": [
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 1",
+        "Fonctions de plusieurs variables/extremums sur un ouvert",
+        "Fonctions de plusieurs variables/gradient",
+        "Fonctions de plusieurs variables/point critique"
+      ]
+    },
+    {
+      "id": 118,
+      "date": 2021,
+      "type": "CCINP",
+      "description": "Critère de D'alembert, série des différences",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/règle de d'Alembert",
+        "Séries numériques/sommes partielles"
+      ]
+    },
+    {
+      "id": 119,
+      "date": 2021,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Etude d'une isométrie de R^3",
+      "tags": [
+        "Espaces préhilbertiens et euclidiens/classification en dimensions 2 et 3",
+        "Espaces préhilbertiens et euclidiens/groupe orthogonal",
+        "Espaces préhilbertiens et euclidiens/isométries vectorielles",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 120,
+      "date": 2021,
+      "type": "CCS1",
+      "description": "Réduction d'un endomorphisme nilpotent",
+      "tags": [
+        "Compléments d'algèbre linéaire/sous-espaces stables",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 121,
+      "date": 2021,
+      "type": "CCS1",
+      "description": "Maximum de loi uniforme, fonction de répartition d'une géométrique",
+      "tags": [
+        "Probabilités/espérance",
+        "Probabilités/loi conjointe",
+        "Probabilités/loi géométrique",
+        "Probabilités/variables aléatoires indépendantes"
+      ]
+    },
+    {
+      "id": 190,
+      "date": 2020,
+      "type": "CCINP",
+      "description": "Calcul d'une intégrale généralisée à paramètre à l'aide d'un changement de variable",
+      "tags": [
+        "Algorithmique numérique/méthode des rectangles",
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/séries à termes positifs"
+      ]
+    },
+    {
+      "id": 191,
+      "date": 2020,
+      "type": "CCINP",
+      "description": "Puissance n ième d'une matrice par division euclidienne",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/récurrences linéaires d'ordre 2"
+      ]
+    },
+    {
+      "id": 192,
+      "date": 2020,
+      "type": "CCINP",
+      "description": "Chaine de Markov en dimension 2",
+      "tags": [
+        "Bases de la programmation/jeu de tests",
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Probabilités/espérance",
+        "Probabilités/loi conditionnelle",
+        "Probabilités/loi conjointe",
+        "Probabilités/lois marginales",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres",
+        "Structures de données/listes"
+      ]
+    },
+    {
+      "id": 193,
+      "date": 2020,
+      "type": "CCINP",
+      "description": "Produit scalaire sur R_2[X]",
+      "tags": [
+        "Espaces préhilbertiens et euclidiens/algorithme de Gram-Schmidt",
+        "Espaces préhilbertiens et euclidiens/distance à un sous-espace",
+        "Espaces préhilbertiens et euclidiens/famille orthonormée",
+        "Espaces préhilbertiens et euclidiens/norme",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale",
+        "Espaces préhilbertiens et euclidiens/théorème de projection"
+      ]
+    },
+    {
+      "id": 194,
+      "date": 2020,
+      "type": "CCINP",
+      "description": "Déterminant d'une matrice tridiagonale à paramètre",
+      "tags": [
+        "Algorithmique numérique/tracé de courbes",
+        "Bases de la programmation/jeu de tests",
+        "Déterminants/définition et unicité",
+        "Déterminants/développement par rapport à une ligne ou colonne",
+        "Déterminants/propriétés du déterminant",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 195,
+      "date": 2020,
+      "type": "CCINP",
+      "description": "Ordre 1, méthode d'Euler",
+      "tags": [
+        "Algorithmique numérique/méthode d'Euler",
+        "Équations différentielles linéaires/théorème de Cauchy-Lipschitz",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/variation de la constante",
+        "Équations différentielles linéaires/équation d'ordre 1"
+      ]
+    },
+    {
+      "id": 122,
+      "date": 2019,
+      "type": "CCINP",
+      "description": "Séries adjacentes",
+      "tags": [
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries alternées"
+      ]
+    },
+    {
+      "id": 123,
+      "date": 2019,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Couple de variables aléatoires",
+      "tags": [
+        "Probabilités/couple de variables aléatoires",
+        "Probabilités/loi conjointe",
+        "Probabilités/lois marginales",
+        "Probabilités/variables aléatoires indépendantes"
+      ]
+    },
+    {
+      "id": 124,
+      "date": 2019,
+      "type": "CCS2",
+      "description": "Commutant d'une matrice de taille 3",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Compléments d'algèbre linéaire/somme de sous-espaces vectoriels",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres",
+        "Structures de données/tableaux à deux dimensions"
+      ]
+    },
+    {
+      "id": 125,
+      "date": 2019,
+      "type": "CCS2",
+      "description": "Matrices de Toepliz",
+      "tags": [
+        "Bases de la programmation/tableaux à deux dimensions",
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Compléments d'algèbre linéaire/somme de sous-espaces vectoriels"
+      ]
+    },
+    {
+      "id": 126,
+      "date": 2019,
+      "type": "CCS2",
+      "description": "Etude d'une isométrie matricielle définie à l'aide de la trace",
+      "tags": [
+        "Compléments d'algèbre linéaire/trace",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 127,
+      "date": 2019,
+      "type": "CCS1",
+      "description": "u_{n+1} = f(u_n)  (racine carrée de a)",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Bases de la programmation/fonctions récursives",
+        "Bases de la programmation/variant et invariant de boucle"
+      ]
+    },
+    {
+      "id": 128,
+      "date": 2019,
+      "type": "CCS1",
+      "description": "Série de Fourier d'un créneau",
+      "tags": [
+        "Séries de Fourier/coefficients de Fourier",
+        "Séries de Fourier/fonctions continues ou C1 par morceaux",
+        "Séries de Fourier/série de Fourier",
+        "Séries de Fourier/théorème de Dirichlet",
+        "Séries de Fourier/théorème de Parseval"
+      ]
+    },
+    {
+      "id": 129,
+      "date": 2019,
+      "type": "CCS2",
+      "description": "Polynômes de Tchebychev",
+      "tags": [
+        "Algorithmique numérique/tracé de courbes",
+        "Bases de la programmation/fonctions récursives",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Séries entières/développements en série entière usuels",
+        "Séries entières/exponentielle complexe"
+      ]
+    },
+    {
+      "id": 130,
+      "date": 2019,
+      "type": "CCINP",
+      "description": "",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young",
+        "Séries entières/développements en série entière usuels"
+      ]
+    },
+    {
+      "id": 131,
+      "date": 2019,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "",
+      "tags": [
+        "Probabilités/espérance",
+        "Probabilités/loi de Poisson",
+        "Probabilités/loi géométrique",
+        "Probabilités/variance",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/sommes partielles"
+      ]
+    },
+    {
+      "id": 132,
+      "date": 2019,
+      "type": "CCINP",
+      "description": "",
+      "tags": [
+        "Espaces préhilbertiens et euclidiens/inégalité de Cauchy-Schwarz",
+        "Espaces préhilbertiens et euclidiens/produit scalaire"
+      ]
+    },
+    {
+      "id": 133,
+      "date": 2019,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "",
+      "tags": [
+        "Séries de Fourier/coefficients de Fourier",
+        "Séries de Fourier/fonctions continues ou C1 par morceaux",
+        "Séries de Fourier/série de Fourier"
+      ]
+    },
+    {
+      "id": 134,
+      "date": 2019,
+      "type": "CCINP",
+      "description": "u_{n+1}/u_n = (n+b)/(n+a)",
+      "tags": [
+        "Séries numériques/convergence et divergence",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries à termes positifs"
+      ]
+    },
+    {
+      "id": 135,
+      "date": 2019,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Jeu de pile ou face",
+      "tags": [
+        "Probabilités/espérance",
+        "Probabilités/loi géométrique",
+        "Probabilités/variables aléatoires indépendantes",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries géométriques"
+      ]
+    },
+    {
+      "id": 136,
+      "date": 2019,
+      "type": "CCS1",
+      "description": "Loi hypergéométrique, approximation par une binomiale",
+      "tags": [
+        "Probabilités/couple de variables aléatoires",
+        "Probabilités/espérance",
+        "Probabilités/loi binomiale",
+        "Probabilités/variance",
+        "Séries numériques/critères de comparaison"
+      ]
+    },
+    {
+      "id": 137,
+      "date": 2019,
+      "type": "CCS1",
+      "description": "M->M+M^T",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Compléments d'algèbre linéaire/transposée",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/spectre",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 138,
+      "date": 2019,
+      "type": "CCINP",
+      "description": "Équation matricielle M + M^T = Tr(M)A",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Compléments d'algèbre linéaire/trace",
+        "Compléments d'algèbre linéaire/transposée"
+      ]
+    },
+    {
+      "id": 139,
+      "date": 2019,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Calcul d'un équivalent",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young",
+        "Séries entières/développements en série entière usuels"
+      ]
+    },
+    {
+      "id": 140,
+      "date": 2019,
+      "type": "CCINP",
+      "description": "Loi de succession de Laplace, équivalent de la série harmonique",
+      "tags": [
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Probabilités/couple de variables aléatoires",
+        "Probabilités/espérance",
+        "Probabilités/loi conjointe",
+        "Probabilités/lois marginales",
+        "Probabilités/variance",
+        "Séries numériques/comparaison série-intégrale",
+        "Séries numériques/sommes partielles"
+      ]
+    },
+    {
+      "id": 141,
+      "date": 2019,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Symétrie et projection orthogonale dans R^4",
+      "tags": [
+        "Compléments d'algèbre linéaire/projecteurs",
+        "Compléments d'algèbre linéaire/symétries",
+        "Espaces préhilbertiens et euclidiens/distance à un sous-espace",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale"
+      ]
+    },
+    {
+      "id": 142,
+      "date": 2019,
+      "type": "CCS2",
+      "description": "Équivalent de la série harmonique",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Algorithmique numérique/tracé de courbes",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/série telescopique"
+      ]
+    },
+    {
+      "id": 144,
+      "date": 2019,
+      "type": "CCS2",
+      "description": "",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Bases de la programmation/jeu de tests",
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales partielles",
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries alternées"
+      ]
+    },
+    {
+      "id": 145,
+      "date": 2019,
+      "type": "CCS1",
+      "description": "Spectre de M->M + M^T",
+      "tags": [
+        "Compléments d'algèbre linéaire/transposée",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/spectre",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 146,
+      "date": 2019,
+      "type": "CCS1",
+      "description": "Diagonalisation de 1_n",
+      "tags": [
+        "Compléments d'algèbre linéaire/trace",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 147,
+      "date": 2019,
+      "type": "CCS1",
+      "description": "Réduction d'un endomorphisme de R_2[X]",
+      "tags": [
+        "Réduction des endomorphismes/condition nécessaire et suffisante de diagonalisabilité",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 148,
+      "date": 2019,
+      "type": "CCS1",
+      "description": "Série de Fourier d'une rampe",
+      "tags": [
+        "Séries de Fourier/coefficients de Fourier",
+        "Séries de Fourier/fonctions continues ou C1 par morceaux",
+        "Séries de Fourier/série de Fourier",
+        "Séries de Fourier/théorème de Dirichlet",
+        "Séries de Fourier/théorème de Parseval"
+      ]
+    },
+    {
+      "id": 149,
+      "date": 2019,
+      "type": "CCS1",
+      "description": "Suite du type u_{n+1} = f(u_n)",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young"
+      ]
+    },
+    {
+      "id": 150,
+      "date": 2019,
+      "type": "CCS2",
+      "description": "Méthode de newton sur un polynôme de degré 3",
+      "tags": [
+        "Algorithmique numérique/dichotomie",
+        "Algorithmique numérique/tracé de courbes",
+        "Bases de la programmation/algorithmes dichotomiques",
+        "Bases de la programmation/spécification des fonctions",
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young"
+      ]
+    },
+    {
+      "id": 46,
+      "date": 2018,
+      "type": "CCS1",
+      "description": "Plan stable d'un endomorphisme ",
+      "tags": [
+        "Compléments d'algèbre linéaire/sous-espaces stables",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 47,
+      "date": 2018,
+      "type": "CCS1",
+      "description": "Système différentiel linéaire, matrice trigonalisable de taille 2",
+      "tags": [
+        "Réduction des endomorphismes/trigonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres",
+        "Équations différentielles linéaires/coefficients constants",
+        "Équations différentielles linéaires/systèmes différentiels linéaires"
+      ]
+    },
+    {
+      "id": 48,
+      "date": 2018,
+      "type": "CCS1",
+      "description": "Racines d'un polynôme complexe",
+      "tags": [
+        "Séries entières/exponentielle complexe"
+      ]
+    },
+    {
+      "id": 49,
+      "date": 2018,
+      "type": "CCS1",
+      "description": "Calcul de la somme d'une série numérique",
+      "tags": [
+        "Séries entières/développements en série entière usuels",
+        "Séries entières/rayon de convergence",
+        "Séries entières/somme d'une série entière",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/critères de comparaison"
+      ]
+    },
+    {
+      "id": 50,
+      "date": 2018,
+      "type": "CCS1",
+      "description": "Etude d'une fonction définie par une intégrale, bornes",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales partielles"
+      ]
+    },
+    {
+      "id": 51,
+      "date": 2018,
+      "type": "CCS1",
+      "description": "Loi binomiale",
+      "tags": [
+        "Probabilités/espérance",
+        "Probabilités/loi binomiale",
+        "Probabilités/variables aléatoires indépendantes",
+        "Probabilités/variance"
+      ]
+    },
+    {
+      "id": 52,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Diagonalisation et trigonalisation d'une matrice à paramètre",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Réduction des endomorphismes/condition nécessaire et suffisante de diagonalisabilité",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/trigonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 53,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Système différentiel linéaire associé à une matrice diagonalisable",
+      "tags": [
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres",
+        "Équations différentielles linéaires/coefficients constants",
+        "Équations différentielles linéaires/systèmes différentiels linéaires"
+      ]
+    },
+    {
+      "id": 54,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Courbe, gradient, tangente",
+      "tags": [
+        "Fonctions de plusieurs variables/courbes",
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 1",
+        "Fonctions de plusieurs variables/gradient",
+        "Fonctions de plusieurs variables/tangente à une courbe"
+      ]
+    },
+    {
+      "id": 55,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Trigonalisation ",
+      "tags": [
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/trigonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 56,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Surface",
+      "tags": [
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 1",
+        "Fonctions de plusieurs variables/gradient",
+        "Fonctions de plusieurs variables/plan tangent",
+        "Fonctions de plusieurs variables/surfaces"
+      ]
+    },
+    {
+      "id": 57,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Polynômes de Laguerre, Schmidt, projection orthogonale",
+      "tags": [
+        "Espaces préhilbertiens et euclidiens/algorithme de Gram-Schmidt",
+        "Espaces préhilbertiens et euclidiens/famille orthonormée",
+        "Espaces préhilbertiens et euclidiens/norme",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/critères de comparaison",
+        "Intégration sur un intervalle quelconque/intégrales généralisées"
+      ]
+    },
+    {
+      "id": 58,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "ordre 2, séries entières, recollement, second membre developpable en série entière, argument de dimension",
+      "tags": [
+        "Compléments d'algèbre linéaire/somme de sous-espaces vectoriels",
+        "Séries entières/développements en série entière usuels",
+        "Séries entières/rayon de convergence",
+        "Séries entières/somme d'une série entière",
+        "Équations différentielles linéaires/recherche de solutions particulières",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/équation d'ordre 2"
+      ]
+    },
+    {
+      "id": 59,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Extremum sur un fermé borné",
+      "tags": [
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 1",
+        "Fonctions de plusieurs variables/extremums sur un fermé borné",
+        "Fonctions de plusieurs variables/gradient",
+        "Fonctions de plusieurs variables/point critique",
+        "Fonctions de plusieurs variables/topologie de Rn"
+      ]
+    },
+    {
+      "id": 77,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Suite récurrente linéaire d'ordre 2 en python",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Algorithmique numérique/tracé de courbes",
+        "Bases de la programmation/fonctions récursives",
+        "Réduction des endomorphismes/récurrences linéaires d'ordre 2"
+      ]
+    },
+    {
+      "id": 78,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Réduction d'un endomorphisme défini à l'aide d'une forme linéaire",
+      "tags": [
+        "Compléments d'algèbre linéaire/somme de sous-espaces vectoriels",
+        "Compléments d'algèbre linéaire/somme directe",
+        "Réduction des endomorphismes/condition nécessaire et suffisante de diagonalisabilité",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 79,
+      "date": 2018,
+      "type": "CCINP",
+      "description": "Très classique, double intégration par parties, Dirichlet, Parseval",
+      "tags": [
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries de Fourier/coefficients de Fourier",
+        "Séries de Fourier/série de Fourier",
+        "Séries de Fourier/théorème de Dirichlet",
+        "Séries de Fourier/théorème de Parseval"
+      ]
+    },
+    {
+      "id": 80,
+      "date": 2018,
+      "type": "CCINP",
+      "description": "AM-MA avec A^2=A",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Compléments d'algèbre linéaire/sous-espaces stables",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 81,
+      "date": 2018,
+      "type": "CCINP",
+      "description": "Divergence absolue de l'integrale de Dirichlet",
+      "tags": [
+        "Intégration sur un intervalle quelconque/convergence absolue",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/critères de comparaison",
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/séries de Riemann"
+      ]
+    },
+    {
+      "id": 82,
+      "date": 2018,
+      "type": "CCINP",
+      "description": "Courbe définie par l'intersection de deux surfaces, équation paramétrique d'une droite",
+      "tags": [
+        "Fonctions de plusieurs variables/classe C1",
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 1",
+        "Fonctions de plusieurs variables/gradient",
+        "Fonctions de plusieurs variables/plan tangent",
+        "Fonctions de plusieurs variables/tangente à une courbe"
+      ]
+    },
+    {
+      "id": 83,
+      "date": 2018,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Comparaison séries-intégrales, équivalent d'une somme partielle divergente",
+      "tags": [
+        "Intégration sur un intervalle quelconque/intégrales partielles",
+        "Séries numériques/comparaison série-intégrale"
+      ]
+    },
+    {
+      "id": 84,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Equivalent des sommes partielles et des restes des séries de Riemann",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Algorithmique numérique/tracé de courbes",
+        "Bases de la programmation/fonctions",
+        "Bases de la programmation/jeu de tests",
+        "Intégration sur un intervalle quelconque/comparaison série-intégrale",
+        "Intégration sur un intervalle quelconque/critères de comparaison",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Séries numériques/convergence et divergence",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries de Riemann"
+      ]
+    },
+    {
+      "id": 85,
+      "date": 2018,
+      "type": "CCS1",
+      "description": "Commutant d'une matrice carrée de taille 2",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 86,
+      "date": 2018,
+      "type": "CCINP",
+      "description": "Reflexion par rapport à l'orthogonal d'une droite, version matricielle du produit scalaire de R^3",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Compléments d'algèbre linéaire/symétries",
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/isométries vectorielles",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale"
+      ]
+    },
+    {
+      "id": 87,
+      "date": 2018,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Rayon de convergence d'une série entière à paramètre",
+      "tags": [
+        "Séries entières/rayon de convergence",
+        "Séries entières/règle de d'Alembert"
+      ]
+    },
+    {
+      "id": 88,
+      "date": 2018,
+      "type": "CCS1",
+      "description": "Matrices orthogonales triangulaires supérieures",
+      "tags": [
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales"
+      ]
+    },
+    {
+      "id": 89,
+      "date": 2018,
+      "type": "CCS1",
+      "description": "Matrice symétrique et orthogonale",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Espaces préhilbertiens et euclidiens/matrices symétriques réelles",
+        "Espaces préhilbertiens et euclidiens/théorème spectral",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 90,
+      "date": 2018,
+      "type": "CCS2",
+      "description": "Type intégrales de Wallis. ",
+      "tags": [
+        "Algorithmique numérique/méthode des trapèzes",
+        "Algorithmique numérique/suites",
+        "Algorithmique numérique/tracé de courbes",
+        "Bases de la programmation/fonctions récursives",
+        "Intégration sur un intervalle quelconque/intégrales classiques",
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries alternées",
+        "Séries numériques/séries à termes positifs"
+      ]
+    },
+    {
+      "id": 3,
+      "date": 2017,
+      "type": "CCS2",
+      "description": "Informatique",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Bases de la programmation/jeu de tests",
+        "Bases de la programmation/recherche séquentielle",
+        "Bases de la programmation/spécification des fonctions",
+        "Structures de données/listes"
+      ]
+    },
+    {
+      "id": 4,
+      "date": 2017,
+      "type": "CCS2",
+      "description": "",
+      "tags": [
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/variation de la constante",
+        "Équations différentielles linéaires/équation d'ordre 1"
+      ]
+    },
+    {
+      "id": 5,
+      "date": 2017,
+      "type": "CCINP",
+      "description": "Réduction d'une matrice symétrique à paramètres",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Espaces préhilbertiens et euclidiens/matrices symétriques réelles",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/spectre",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 6,
+      "date": 2017,
+      "type": "CCINP",
+      "description": "Equations différentielles linéaires d'ordre 2, séries entières",
+      "tags": [
+        "Séries entières/développements en série entière usuels",
+        "Séries entières/rayon de convergence",
+        "Séries entières/somme d'une série entière",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/équation d'ordre 2"
+      ]
+    },
+    {
+      "id": 7,
+      "date": 2017,
+      "type": "CCINP",
+      "description": "Produit scalaire canonique sur M_n(R)",
+      "tags": [
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Compléments d'algèbre linéaire/somme directe",
+        "Compléments d'algèbre linéaire/trace",
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/distance à un sous-espace",
+        "Espaces préhilbertiens et euclidiens/inégalité de Cauchy-Schwarz",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Espaces préhilbertiens et euclidiens/norme",
+        "Espaces préhilbertiens et euclidiens/orthogonalité",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale",
+        "Espaces préhilbertiens et euclidiens/théorème de projection"
+      ]
+    },
+    {
+      "id": 8,
+      "date": 2017,
+      "type": "CCINP",
+      "description": "L'astroide",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/point régulier",
+        "Fonctions vectorielles et courbes paramétrées/réduction du domaine d'étude et symétries",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
+    },
+    {
+      "id": 9,
+      "date": 2017,
+      "type": "CCINP",
+      "description": "Série harmonique, série harmonique alternée, comparaison à une intégrale",
+      "tags": [
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales partielles",
+        "Séries numériques/comparaison série-intégrale",
+        "Séries numériques/convergence et divergence",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries alternées"
+      ]
+    },
+    {
+      "id": 10,
+      "date": 2017,
+      "type": "CCS1",
+      "description": "",
+      "tags": [
+        "Séries de Fourier/coefficients de Fourier",
+        "Séries de Fourier/série de Fourier",
+        "Séries de Fourier/théorème de Dirichlet",
+        "Séries de Fourier/théorème de Parseval",
+        "Séries numériques/convergence absolue"
+      ]
+    },
+    {
+      "id": 11,
+      "date": 2017,
+      "type": "CCS2",
+      "description": "Chaine de Markov",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Probabilités/variables aléatoires indépendantes",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 12,
+      "date": 2017,
+      "type": "CCS2",
+      "description": "python",
+      "tags": [
+        "Bases de la programmation/spécification des fonctions",
+        "Structures de données/listes"
+      ]
+    },
+    {
+      "id": 13,
+      "date": 2017,
+      "type": "CCINP",
+      "description": "",
+      "tags": [
+        "Bases de la programmation/fonctions récursives",
+        "Séries de Fourier/coefficients de Fourier",
+        "Séries de Fourier/série de Fourier",
+        "Séries de Fourier/théorème de Dirichlet",
+        "Séries de Fourier/théorème de Parseval",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/séries alternées"
+      ]
+    },
+    {
+      "id": 14,
+      "date": 2017,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Réflexion par rapport à un plan ",
+      "tags": [
+        "Compléments d'algèbre linéaire/symétries",
+        "Espaces préhilbertiens et euclidiens/matrices orthogonales",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices"
+      ]
+    },
+    {
+      "id": 15,
+      "date": 2017,
+      "type": "CCS2",
+      "description": "Extremum sur un fermé borné",
+      "tags": [
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 1",
+        "Fonctions de plusieurs variables/extremums sur un fermé borné",
+        "Fonctions de plusieurs variables/gradient",
+        "Fonctions de plusieurs variables/point critique"
+      ]
+    },
+    {
+      "id": 16,
+      "date": 2017,
+      "type": "CCS2",
+      "description": "Equations différentelles linéaires d'ordre 2, argument de dimension, séries entières avec second membre",
+      "tags": [
+        "Compléments d'algèbre linéaire/familles dénombrables",
+        "Séries entières/dérivation terme à terme",
+        "Séries entières/rayon de convergence",
+        "Séries entières/somme d'une série entière",
+        "Équations différentielles linéaires/coefficients constants",
+        "Équations différentielles linéaires/recherche de solutions particulières",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/équation d'ordre 2"
+      ]
+    },
+    {
+      "id": 18,
+      "date": 2017,
+      "type": "CCS1",
+      "description": "Conditionnement d'une loi binomiale par une loi de Poisson",
+      "tags": [
+        "Probabilités/couple de variables aléatoires",
+        "Probabilités/formule des probabilités totales",
+        "Probabilités/loi binomiale",
+        "Probabilités/loi conditionnelle",
+        "Probabilités/loi conjointe",
+        "Probabilités/loi de Poisson"
+      ]
+    },
+    {
+      "id": 21,
+      "date": 2017,
+      "type": "CCINP",
+      "description": "Inégalité de Wirtinger",
+      "tags": [
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries de Fourier/coefficients de Fourier",
+        "Séries de Fourier/théorème de Parseval"
+      ]
+    },
+    {
+      "id": 1,
+      "date": 2016,
+      "type": "CCS1",
+      "description": "",
+      "tags": [
+        "Compléments d'algèbre linéaire/somme de sous-espaces vectoriels",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 2,
+      "date": 2016,
+      "type": "CCS2",
+      "description": "",
+      "tags": [
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/convergence et divergence",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/séries alternées",
+        "Séries numériques/séries à termes positifs"
+      ]
+    },
+    {
+      "id": 34,
+      "date": 2016,
+      "type": "CCINP",
+      "description": "Etude d'une fonction définie par une intégrale impropre",
+      "tags": [
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/critères de comparaison",
+        "Intégration sur un intervalle quelconque/intégrales généralisées",
+        "Intégration sur un intervalle quelconque/intégration par parties"
+      ]
+    },
+    {
+      "id": 35,
+      "date": 2016,
+      "type": "CCS1",
+      "description": "Factorisation d'un polynôme de degré 4",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice"
+      ]
+    },
+    {
+      "id": 36,
+      "date": 2016,
+      "type": "CCS2",
+      "description": "Conditionnement d'une loi de Bernoulli par une loi géométrique",
+      "tags": [
+        "Probabilités/espérance",
+        "Probabilités/formule des probabilités totales",
+        "Probabilités/loi géométrique",
+        "Probabilités/variance",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries géométriques"
+      ]
+    },
+    {
+      "id": 37,
+      "date": 2016,
+      "type": "CCS2",
+      "description": "Comportement asymptotique système suites récurrentes",
+      "tags": [
+        "Espaces préhilbertiens et euclidiens/famille orthonormée",
+        "Espaces préhilbertiens et euclidiens/matrices symétriques réelles",
+        "Espaces préhilbertiens et euclidiens/théorème spectral",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 38,
+      "date": 2016,
+      "type": "CCS2",
+      "description": "Etude d'une suite définie par une intégrale, type Wallis",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Algorithmique numérique/tracé de courbes",
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales partielles",
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/sommes partielles",
+        "Séries numériques/séries à termes positifs"
+      ]
+    },
+    {
+      "id": 39,
+      "date": 2016,
+      "type": "CCINP",
+      "description": "Exponentielle d'une matrice nilpotente",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Réduction des endomorphismes/puissances de matrices"
+      ]
+    },
+    {
+      "id": 40,
+      "date": 2016,
+      "type": "CCINP (Questions ouvertes)",
+      "description": "Loi binomiale",
+      "tags": [
+        "Probabilités/espérance",
+        "Probabilités/loi binomiale"
+      ]
+    },
+    {
+      "id": 64,
+      "date": 2016,
+      "type": "CCS1",
+      "description": "Convergence d'une intégrale impropre",
+      "tags": [
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/intégration par parties"
+      ]
+    },
+    {
+      "id": 23,
+      "date": 2015,
+      "type": "CCINP",
+      "description": "Polynôme orthogonaux",
+      "tags": [
+        "Espaces préhilbertiens et euclidiens/algorithme de Gram-Schmidt",
+        "Espaces préhilbertiens et euclidiens/famille orthonormée",
+        "Espaces préhilbertiens et euclidiens/produit scalaire",
+        "Espaces préhilbertiens et euclidiens/projection orthogonale",
+        "Intégration sur un intervalle quelconque/convergence et divergence",
+        "Intégration sur un intervalle quelconque/intégrales généralisées"
+      ]
+    },
+    {
+      "id": 24,
+      "date": 2015,
+      "type": "CCINP",
+      "description": "Equation différentielle linéaire d'ordre 1, non-linéaire d'ordre 1",
+      "tags": [
+        "Équations différentielles linéaires/théorème de Cauchy-Lipschitz",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/variation de la constante",
+        "Équations différentielles linéaires/équation d'ordre 1"
+      ]
+    },
+    {
+      "id": 25,
+      "date": 2015,
+      "type": "CCS1",
+      "description": "Ordre 2 coefficients constant second membre cosh",
+      "tags": [
+        "Équations différentielles linéaires/coefficients constants",
+        "Équations différentielles linéaires/recherche de solutions particulières",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/équation d'ordre 2"
+      ]
+    },
+    {
+      "id": 26,
+      "date": 2015,
+      "type": "CCS1",
+      "description": "Image d'un cercle par une homographie",
+      "tags": [
+        "Séries entières/exponentielle complexe"
+      ]
+    },
+    {
+      "id": 27,
+      "date": 2015,
+      "type": "CCS2",
+      "description": "",
+      "tags": [
+        "Séries de Fourier/coefficients de Fourier",
+        "Séries de Fourier/fonctions continues ou C1 par morceaux",
+        "Séries de Fourier/série de Fourier",
+        "Séries de Fourier/théorème de Dirichlet",
+        "Séries numériques/convergence absolue"
+      ]
+    },
+    {
+      "id": 28,
+      "date": 2015,
+      "type": "CCINP",
+      "description": "Equation de la chaleur",
+      "tags": [
+        "Fonctions de plusieurs variables/classe C1",
+        "Fonctions de plusieurs variables/dérivées partielles d'ordre 2",
+        "Fonctions de plusieurs variables/théorème de Schwarz",
+        "Fonctions de plusieurs variables/équations aux dérivées partielles",
+        "Équations différentielles linéaires/variation de la constante",
+        "Équations différentielles linéaires/équation d'ordre 1"
+      ]
+    },
+    {
+      "id": 29,
+      "date": 2015,
+      "type": "CCS1",
+      "description": "Solution développable en série entière",
+      "tags": [
+        "Séries entières/dérivation terme à terme",
+        "Séries entières/rayon de convergence",
+        "Séries entières/somme d'une série entière",
+        "Équations différentielles linéaires/recherche de solutions particulières"
+      ]
+    },
+    {
+      "id": 30,
+      "date": 2015,
+      "type": "CCS2",
+      "description": "Puissance n-ième d'une matrice via un polynôme annulateur",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Compléments d'algèbre linéaire/somme de sous-espaces vectoriels",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 31,
+      "date": 2015,
+      "type": "CCINP",
+      "description": "Equation différentielle linéaire d'ordre 1, non-linéaire",
+      "tags": [
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/variation de la constante",
+        "Équations différentielles linéaires/équation d'ordre 1"
+      ]
+    },
+    {
+      "id": 32,
+      "date": 2015,
+      "type": "CCINP",
+      "description": "Polynômes de matrices, projecteurs, décomposition spectrale, puissance n-ième",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Compléments d'algèbre linéaire/projecteurs",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/valeurs propres"
+      ]
+    },
+    {
+      "id": 33,
+      "date": 2015,
+      "type": "CCS2",
+      "description": "Calcul de somme, théorème radial, approximation numérique",
+      "tags": [
+        "Intégration sur un intervalle quelconque/intégration par parties",
+        "Séries entières/développements en série entière usuels",
+        "Séries entières/rayon de convergence",
+        "Séries entières/règle de d'Alembert",
+        "Séries entières/somme d'une série entière",
+        "Séries numériques/convergence et divergence",
+        "Séries numériques/séries à termes positifs"
+      ]
+    },
+    {
+      "id": 42,
+      "date": 2015,
+      "type": "CCINP",
+      "description": "Série entière, comportement au bord",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/formule de Taylor-Young",
+        "Séries entières/rayon de convergence",
+        "Séries entières/règle de d'Alembert",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/séries alternées"
+      ]
+    },
+    {
+      "id": 43,
+      "date": 2015,
+      "type": "CCINP",
+      "description": "Etude détaillée d'une courbe paramétrée",
+      "tags": [
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/point régulier",
+        "Fonctions vectorielles et courbes paramétrées/réduction du domaine d'étude et symétries",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
+    },
+    {
+      "id": 44,
+      "date": 2015,
+      "type": "CCINP",
+      "description": "Suite arithmético-matricielle",
+      "tags": [
+        "Compléments d'algèbre linéaire/somme de sous-espaces vectoriels",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/polynôme caractéristique",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/récurrences linéaires d'ordre 2",
+        "Réduction des endomorphismes/sous-espaces propres",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 45,
+      "date": 2015,
+      "type": "CCS1",
+      "description": "",
+      "tags": [
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales partielles"
+      ]
+    },
+    {
+      "id": 60,
+      "date": 2015,
+      "type": "CCS2",
+      "description": "Approche numérique, python, racine carré d'une matrice symétrique définie positive, calcul algorithmique itératif",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Compléments d'algèbre linéaire/matrices symétriques et antisymétriques",
+        "Compléments d'algèbre linéaire/transposée",
+        "Espaces préhilbertiens et euclidiens/matrices symétriques réelles",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 61,
+      "date": 2015,
+      "type": "CCS1",
+      "description": "Approximation d'une loi de Poisson par une binomiale",
+      "tags": [
+        "Probabilités/loi binomiale",
+        "Probabilités/loi de Poisson",
+        "Séries entières/développements en série entière usuels",
+        "Séries entières/somme d'une série entière"
+      ]
+    },
+    {
+      "id": 62,
+      "date": 2015,
+      "type": "CCS2",
+      "description": "Puissance n_ième de matrice",
+      "tags": [
+        "Compléments d'algèbre linéaire/polynôme de matrice",
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/puissances de matrices"
+      ]
+    },
+    {
+      "id": 187,
+      "date": 2015,
+      "type": "CCS1",
+      "description": "Système différentiel diagonalisable",
+      "tags": [
+        "Réduction des endomorphismes/diagonalisation",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres",
+        "Équations différentielles linéaires/coefficients constants",
+        "Équations différentielles linéaires/systèmes différentiels linéaires"
+      ]
+    },
+    {
+      "id": 188,
+      "date": 2015,
+      "type": "CCS1",
+      "description": "Valeurs propres d'un endomorphisme en dimension infinie",
+      "tags": [
+        "Intégration sur un intervalle quelconque/intégrales classiques",
+        "Réduction des endomorphismes/valeurs propres",
+        "Réduction des endomorphismes/vecteurs propres"
+      ]
+    },
+    {
+      "id": 189,
+      "date": 2015,
+      "type": "CCS2",
+      "description": "Supplémentarité des fonctions paires et impaires",
+      "tags": [
+        "Compléments d'algèbre linéaire/somme de sous-espaces vectoriels",
+        "Compléments d'algèbre linéaire/somme directe",
+        "Équations différentielles linéaires/coefficients constants",
+        "Équations différentielles linéaires/recherche de solutions particulières",
+        "Équations différentielles linéaires/théorème de structure",
+        "Équations différentielles linéaires/équation d'ordre 2"
+      ]
+    },
+    {
+      "id": 22,
+      "date": 2014,
+      "type": "CCINP",
+      "description": "Sommes de Riemann",
+      "tags": [
+        "Intégration sur un intervalle quelconque/changement de variable",
+        "Intégration sur un intervalle quelconque/intégrales partielles",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/sommes partielles"
+      ]
+    },
+    {
+      "id": 41,
+      "date": 2014,
+      "type": "CCINP",
+      "description": "Etude d'une courbe paramétrée",
+      "tags": [
+        "Fonctions de plusieurs variables/courbes",
+        "Fonctions de plusieurs variables/tangente à une courbe",
+        "Fonctions vectorielles et courbes paramétrées/continuité et dérivabilité",
+        "Fonctions vectorielles et courbes paramétrées/courbes paramétrées",
+        "Fonctions vectorielles et courbes paramétrées/tangente"
+      ]
     }
   ]
 }
