@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercices Oraux TSI2</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap');
 
@@ -349,6 +350,12 @@
         </select>
       </div>
 
+      <!-- Description -->
+      <div class="filter-group">
+        <label for="desc-input">Description</label>
+        <input type="text" id="desc-input" placeholder="ex : Wallis, Fourier, diagonalisation…">
+      </div>
+
       <!-- Tags avec autocomplétion -->
       <div class="filter-group tag-input-wrapper">
         <label>Tags</label>
@@ -373,6 +380,8 @@
   let allTags = [];
   let selectedTags = [];
   let activeIndex = -1;
+  let fuse = null;
+  let allExercices = [];
 
   // Charge la base SQLite
   async function loadDatabase() {
@@ -395,8 +404,16 @@
     return rows;
   }
 
-  // Initialise les filtres
-  function initFilters() {
+  // Initialise l'index Fuse pour la recherche fuzzy sur les descriptions
+  function initFuse() {
+    allExercices = query("SELECT id_ex, description FROM ExerciceOraux WHERE utilisé = 'oui'");
+    fuse = new Fuse(allExercices, {
+      keys: ['description'],
+      threshold: 0.4,      // 0 = exact, 1 = tout accepter
+      minMatchCharLength: 3,
+      ignoreLocation: true,
+    });
+  }
     // Types
     const types = query("SELECT id_type, nom_epreuve FROM Type ORDER BY nom_epreuve");
     const sel = document.getElementById('type-select');
@@ -508,6 +525,14 @@
   function search() {
     const typeId = document.getElementById('type-select').value;
     const sort = document.getElementById('sort-select').value;
+    const descQuery = document.getElementById('desc-input').value.trim();
+
+    // Recherche fuzzy sur les descriptions
+    let fuzzyIds = null;
+    if (descQuery.length >= 3) {
+      const results = fuse.search(descQuery);
+      fuzzyIds = new Set(results.map(r => r.item.id_ex));
+    }
 
     let sql, params = [];
 
@@ -562,7 +587,13 @@
     const orderBy = sort === 'date_asc' ? 'e.date ASC' : sort === 'id' ? 'e.id_ex ASC' : 'e.date DESC';
     sql += ` ORDER BY ${orderBy}`;
 
-    const results = query(sql, params);
+    let results = query(sql, params);
+
+    // Filtre par recherche fuzzy si une description est saisie
+    if (fuzzyIds !== null) {
+      results = results.filter(r => fuzzyIds.has(r.id_ex));
+    }
+
     renderResults(results);
   }
 
@@ -615,11 +646,13 @@
   // Événements
   document.getElementById('type-select').addEventListener('change', search);
   document.getElementById('sort-select').addEventListener('change', search);
+  document.getElementById('desc-input').addEventListener('input', search);
 
   // Initialisation
   (async () => {
     try {
       await loadDatabase();
+      initFuse();
       initFilters();
       document.getElementById('loading').style.display = 'none';
       document.getElementById('app').style.display = 'block';
