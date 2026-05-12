@@ -310,6 +310,7 @@
     .exercise-content.open { display: block; }
 
     .exercise-content ol { padding-left: 1.5rem; }
+    .exercise-content ol { list-style-type: decimal; }
     .exercise-content ol ol { list-style-type: lower-alpha; }
     .exercise-content ol ol ol { list-style-type: lower-roman; }
       text-align: center;
@@ -583,19 +584,28 @@
           </div>
           <div class="exercise-desc">${ex.description || '<em style="color:var(--muted)">Sans description</em>'}</div>
           <div class="exercise-tags">${tagHtml}</div>
-          ${hasContent ? '<button class="exercise-toggle">▶ Afficher l\'exercice</button>' : ''}
-          ${hasContent ? `<div class="exercise-content">${ex.html}</div>` : ''}
         </div>
       `;
 
       if (hasContent) {
-        const btn = card.querySelector('.exercise-toggle');
-        const content = card.querySelector('.exercise-content');
+        const body = card.querySelector('.exercise-body');
+
+        const btn = document.createElement('button');
+        btn.className = 'exercise-toggle';
+        btn.textContent = '▶ Afficher l\'exercice';
+
+        const content = document.createElement('div');
+        content.className = 'exercise-content';
+        content.innerHTML = ex.html;
+
         btn.addEventListener('click', () => {
           const open = content.classList.toggle('open');
           btn.textContent = open ? '▼ Masquer l\'exercice' : '▶ Afficher l\'exercice';
           if (open) MathJax.typesetPromise([content]);
         });
+
+        body.appendChild(btn);
+        body.appendChild(content);
       }
 
       list.appendChild(card);
