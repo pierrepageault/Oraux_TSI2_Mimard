@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercices Oraux TSI2</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap');
 
@@ -276,7 +283,35 @@
       border-radius: 2px;
     }
 
-    .no-results {
+    .exercise-toggle {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--accent);
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 0.4rem;
+      opacity: 0.7;
+      transition: opacity 0.15s;
+    }
+    .exercise-toggle:hover { opacity: 1; }
+
+    .exercise-content {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: var(--bg);
+      border-left: 2px solid var(--border);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .exercise-content.open { display: block; }
+
+    .exercise-content ol { padding-left: 1.5rem; }
+    .exercise-content ol ol { list-style-type: lower-alpha; }
+    .exercise-content ol ol ol { list-style-type: lower-roman; }
       text-align: center;
       padding: 3rem 0;
       color: var(--muted);
@@ -334,7 +369,7 @@
 
       <div class="filter-group">
         <label for="desc-input">Description (recherche approximative)</label>
-        <input type="text" id="desc-input" placeholder="ex : Wallis, nilpotente, ... ">
+        <input type="text" id="desc-input" placeholder="ex : Wallis, Fourier, diagonalisation…">
       </div>
 
       <div class="filter-group tag-input-wrapper">
@@ -536,6 +571,7 @@
 
     results.forEach(ex => {
       const tagHtml = ex.tags.map(t => `<span class="exercise-tag">${t}</span>`).join('');
+      const hasContent = ex.html && ex.html.trim().length > 0;
       const card = document.createElement('div');
       card.className = 'exercise-card';
       card.innerHTML = `
@@ -547,8 +583,21 @@
           </div>
           <div class="exercise-desc">${ex.description || '<em style="color:var(--muted)">Sans description</em>'}</div>
           <div class="exercise-tags">${tagHtml}</div>
+          ${hasContent ? '<button class="exercise-toggle">▶ Afficher l\'exercice</button>' : ''}
+          ${hasContent ? `<div class="exercise-content">${ex.html}</div>` : ''}
         </div>
       `;
+
+      if (hasContent) {
+        const btn = card.querySelector('.exercise-toggle');
+        const content = card.querySelector('.exercise-content');
+        btn.addEventListener('click', () => {
+          const open = content.classList.toggle('open');
+          btn.textContent = open ? '▼ Masquer l\'exercice' : '▶ Afficher l\'exercice';
+          if (open) MathJax.typesetPromise([content]);
+        });
+      }
+
       list.appendChild(card);
     });
   }
