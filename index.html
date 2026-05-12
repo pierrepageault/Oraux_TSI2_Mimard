@@ -522,18 +522,27 @@
       if (typeId) params.push(typeId);
     } else {
       // Intersection : l'exercice doit avoir TOUS les tags sélectionnés
-      const tagConditions = selectedTags.map(() => `
-        EXISTS (
-          SELECT 1 FROM ExerciceTag et
-          JOIN TagTheme tt ON et.tag = tt.id_tag
-          JOIN Chapitre c ON tt.chapitre = c.id_chapitre
-          WHERE et.exercice = e.id_ex
-          AND (
-            c.nom = ?                          -- tag = chapitre seul → tous les sous-tags inclus
-            OR c.nom || '/' || tt.nom = ?      -- tag = chapitre/sous-tag exact
-          )
-        )
-      `).join(' AND ');
+      const tagConditions = selectedTags.map(tag => {
+        const isChapitreSeul = !tag.includes('/');
+        if (isChapitreSeul) {
+          // Chapitre seul → tous les exercices du chapitre
+          return `EXISTS (
+            SELECT 1 FROM ExerciceTag et
+            JOIN TagTheme tt ON et.tag = tt.id_tag
+            JOIN Chapitre c ON tt.chapitre = c.id_chapitre
+            WHERE et.exercice = e.id_ex AND c.nom = ?
+          )`;
+        } else {
+          // Chapitre/sous-tag → sous-tag exact uniquement
+          return `EXISTS (
+            SELECT 1 FROM ExerciceTag et
+            JOIN TagTheme tt ON et.tag = tt.id_tag
+            JOIN Chapitre c ON tt.chapitre = c.id_chapitre
+            WHERE et.exercice = e.id_ex
+            AND c.nom || '/' || tt.nom = ?
+          )`;
+        }
+      }).join(' AND ');
 
       sql = `
         SELECT DISTINCT e.id_ex, e.date, t.nom_epreuve, e.description
@@ -546,9 +555,7 @@
 
       if (typeId) params.push(typeId);
       selectedTags.forEach(tag => {
-        const parts = tag.split('/');
-        params.push(parts[0]); // pour c.nom
-        params.push(tag);      // pour c.nom || '/' || tt.nom
+        params.push(tag); // un seul paramètre par tag (chapitre seul ou chapitre/sous-tag)
       });
     }
 
