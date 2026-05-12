@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercices Oraux TSI2</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap');
@@ -43,7 +42,6 @@
       font-size: 2rem;
       font-weight: 500;
       letter-spacing: -0.02em;
-      color: var(--text);
     }
 
     header p {
@@ -59,7 +57,6 @@
       padding: 2rem;
     }
 
-    /* --- Filtres --- */
     .filters {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -97,9 +94,7 @@
     }
 
     .filter-group select:focus,
-    .filter-group input:focus {
-      border-color: var(--accent);
-    }
+    .filter-group input:focus { border-color: var(--accent); }
 
     .filter-group select {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7670' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -108,7 +103,7 @@
       padding-right: 2.2rem;
     }
 
-    /* Autocomplete tags */
+    /* Tags */
     .tag-input-wrapper {
       position: relative;
       grid-column: 1 / -1;
@@ -127,9 +122,7 @@
       transition: border-color 0.15s;
     }
 
-    .tags-selected:focus-within {
-      border-color: var(--accent);
-    }
+    .tags-selected:focus-within { border-color: var(--accent); }
 
     .tag-chip {
       display: inline-flex;
@@ -192,9 +185,7 @@
     }
 
     .autocomplete-item:hover,
-    .autocomplete-item.active {
-      background: var(--accent-light);
-    }
+    .autocomplete-item.active { background: var(--accent-light); }
 
     .autocomplete-item .item-type {
       font-family: 'DM Mono', monospace;
@@ -203,7 +194,7 @@
       margin-left: 0.4rem;
     }
 
-    /* --- Résultats --- */
+    /* Résultats */
     .results-header {
       display: flex;
       justify-content: space-between;
@@ -219,11 +210,7 @@
       color: var(--muted);
     }
 
-    .exercise-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    .exercise-list { display: flex; flex-direction: column; }
 
     .exercise-card {
       padding: 1.2rem 0;
@@ -236,7 +223,7 @@
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     .exercise-id {
@@ -246,8 +233,6 @@
       padding-top: 0.15rem;
       text-align: right;
     }
-
-    .exercise-body {}
 
     .exercise-meta {
       display: flex;
@@ -272,7 +257,6 @@
 
     .exercise-desc {
       font-size: 1rem;
-      color: var(--text);
       margin-bottom: 0.5rem;
     }
 
@@ -322,17 +306,16 @@
 
 <header>
   <h1>Exercices Oraux TSI2</h1>
-  <p>Recherchez par tags et type d'épreuve</p>
+  <p>Recherchez par tags, type d'épreuve ou description</p>
 </header>
 
 <main>
-  <div id="loading" class="loading">Chargement de la base de données…</div>
+  <div id="loading" class="loading">Chargement…</div>
   <div id="error" class="error" style="display:none"></div>
 
   <div id="app" style="display:none">
     <div class="filters">
 
-      <!-- Type d'épreuve -->
       <div class="filter-group">
         <label for="type-select">Type d'épreuve</label>
         <select id="type-select">
@@ -340,7 +323,6 @@
         </select>
       </div>
 
-      <!-- Tri -->
       <div class="filter-group">
         <label for="sort-select">Trier par</label>
         <select id="sort-select">
@@ -350,13 +332,11 @@
         </select>
       </div>
 
-      <!-- Description -->
       <div class="filter-group">
-        <label for="desc-input">Description</label>
+        <label for="desc-input">Description (recherche approximative)</label>
         <input type="text" id="desc-input" placeholder="ex : Wallis, Fourier, diagonalisation…">
       </div>
 
-      <!-- Tags avec autocomplétion -->
       <div class="filter-group tag-input-wrapper">
         <label>Tags</label>
         <div class="tags-selected" id="tags-selected" onclick="document.getElementById('tag-input').focus()">
@@ -376,67 +356,53 @@
 </main>
 
 <script>
-  let db = null;
+  let data = null;
+  let fuse = null;
   let allTags = [];
   let selectedTags = [];
   let activeIndex = -1;
-  let fuse = null;
-  let allExercices = [];
+  let debounceTimer = null;
 
-  // Charge la base SQLite
-  async function loadDatabase() {
-    const config = { locateFile: f => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/${f}` };
-    const SQL = await initSqlJs(config);
-
-    const response = await fetch('TSI2_public.db');
-    if (!response.ok) throw new Error(`Impossible de charger la base (${response.status})`);
-
-    const buffer = await response.arrayBuffer();
-    db = new SQL.Database(new Uint8Array(buffer));
+  // Charge le JSON
+  async function loadData() {
+    const res = await fetch('data.json');
+    if (!res.ok) throw new Error(`Impossible de charger data.json (${res.status})`);
+    data = await res.json();
   }
 
-  function query(sql, params = []) {
-    const stmt = db.prepare(sql);
-    stmt.bind(params);
-    const rows = [];
-    while (stmt.step()) rows.push(stmt.getAsObject());
-    stmt.free();
-    return rows;
-  }
-
-  // Initialise l'index Fuse pour la recherche fuzzy sur les descriptions
+  // Initialise Fuse.js sur les descriptions
   function initFuse() {
-    allExercices = query("SELECT id_ex, description FROM ExerciceOraux WHERE utilisé = 'oui'");
-    fuse = new Fuse(allExercices, {
+    fuse = new Fuse(data.exercices, {
       keys: ['description'],
-      threshold: 0.4,      // 0 = exact, 1 = tout accepter
+      threshold: 0.4,
       minMatchCharLength: 3,
       ignoreLocation: true,
     });
   }
+
+  // Initialise les filtres
+  function initFilters() {
     // Types
-    const types = query("SELECT id_type, nom_epreuve FROM Type ORDER BY nom_epreuve");
     const sel = document.getElementById('type-select');
-    types.forEach(t => {
+    data.types.forEach(t => {
       const opt = document.createElement('option');
-      opt.value = t.id_type;
-      opt.textContent = t.nom_epreuve;
+      opt.value = t;
+      opt.textContent = t;
       sel.appendChild(opt);
     });
 
-    // Tags pour autocomplétion
-    const chapitres = query("SELECT nom FROM Chapitre ORDER BY nom");
-    const soustags = query(`
-      SELECT c.nom as chapitre, t.nom as soustag
-      FROM TagTheme t
-      JOIN Chapitre c ON t.chapitre = c.id_chapitre
-      WHERE t.nom IS NOT NULL
-      ORDER BY c.nom, t.nom
-    `);
-    allTags = [
-      ...chapitres.map(c => ({ label: c.nom, value: c.nom, type: 'chapitre' })),
-      ...soustags.map(s => ({ label: `${s.chapitre}/${s.soustag}`, value: `${s.chapitre}/${s.soustag}`, type: 'sous-tag' }))
-    ];
+    // Tags pour autocomplétion (chapitres + sous-tags)
+    const chapitres = data.chapitres.map(c => ({ label: c, value: c, type: 'chapitre' }));
+    const soustags = [];
+    data.exercices.forEach(ex => {
+      ex.tags.forEach(tag => {
+        if (tag.includes('/') && !soustags.find(t => t.value === tag)) {
+          soustags.push({ label: tag, value: tag, type: 'sous-tag' });
+        }
+      });
+    });
+    soustags.sort((a, b) => a.label.localeCompare(b.label));
+    allTags = [...chapitres, ...soustags];
   }
 
   // Autocomplétion
@@ -454,7 +420,7 @@
     if (!matches.length) { autocompleteList.classList.add('hidden'); return; }
 
     autocompleteList.innerHTML = matches.map((t, i) =>
-      `<div class="autocomplete-item" data-value="${t.value}" data-idx="${i}">
+      `<div class="autocomplete-item" data-value="${t.value.replace(/"/g,'&quot;')}" data-idx="${i}">
         ${t.label}<span class="item-type">${t.type}</span>
       </div>`
     ).join('');
@@ -462,10 +428,7 @@
     activeIndex = -1;
 
     autocompleteList.querySelectorAll('.autocomplete-item').forEach(el => {
-      el.addEventListener('mousedown', e => {
-        e.preventDefault();
-        addTag(el.dataset.value);
-      });
+      el.addEventListener('mousedown', e => { e.preventDefault(); addTag(el.dataset.value); });
     });
   });
 
@@ -488,9 +451,7 @@
   });
 
   document.addEventListener('click', e => {
-    if (!e.target.closest('.tag-input-wrapper')) {
-      autocompleteList.classList.add('hidden');
-    }
+    if (!e.target.closest('.tag-input-wrapper')) autocompleteList.classList.add('hidden');
   });
 
   function addTag(value) {
@@ -516,96 +477,52 @@
     selectedTags.forEach(tag => {
       const chip = document.createElement('span');
       chip.className = 'tag-chip';
-      chip.innerHTML = `${tag}<button onclick="removeTag('${tag.replace(/'/g, "\\'")}')" title="Retirer">×</button>`;
+      chip.innerHTML = `${tag}<button onclick="removeTag(this.parentElement.textContent.trim().slice(0,-1))" title="Retirer">×</button>`;
       container.insertBefore(chip, tagInput);
     });
   }
 
-  // Recherche principale
+  // Recherche principale (tout en JS, pas de SQL)
   function search() {
-    const typeId = document.getElementById('type-select').value;
+    const typeFilter = document.getElementById('type-select').value;
     const sort = document.getElementById('sort-select').value;
     const descQuery = document.getElementById('desc-input').value.trim();
 
-    // Recherche fuzzy sur les descriptions
+    // Ids correspondant à la recherche floue sur la description
     let fuzzyIds = null;
     if (descQuery.length >= 3) {
       const results = fuse.search(descQuery);
-      fuzzyIds = new Set(results.map(r => r.item.id_ex));
+      fuzzyIds = new Set(results.map(r => r.item.id));
     }
 
-    let sql, params = [];
+    let results = data.exercices.filter(ex => {
+      // Filtre type
+      if (typeFilter && ex.type !== typeFilter) return false;
 
-    if (selectedTags.length === 0) {
-      sql = `
-        SELECT DISTINCT e.id_ex, e.date, t.nom_epreuve, e.description
-        FROM ExerciceOraux e
-        LEFT JOIN Type t ON e.type = t.id_type
-        WHERE e.utilisé = 'oui'
-        ${typeId ? 'AND e.type = ?' : ''}
-      `;
-      if (typeId) params.push(typeId);
-    } else {
-      // Intersection : l'exercice doit avoir TOUS les tags sélectionnés
-      const tagConditions = selectedTags.map(tag => {
+      // Filtre description (fuzzy)
+      if (fuzzyIds !== null && !fuzzyIds.has(ex.id)) return false;
+
+      // Filtre tags — l'exercice doit avoir TOUS les tags sélectionnés
+      for (const tag of selectedTags) {
         const isChapitreSeul = !tag.includes('/');
         if (isChapitreSeul) {
-          // Chapitre seul → tous les exercices du chapitre
-          return `EXISTS (
-            SELECT 1 FROM ExerciceTag et
-            JOIN TagTheme tt ON et.tag = tt.id_tag
-            JOIN Chapitre c ON tt.chapitre = c.id_chapitre
-            WHERE et.exercice = e.id_ex AND c.nom = ?
-          )`;
+          // Chapitre seul → au moins un tag du chapitre
+          const chap = tag;
+          if (!ex.tags.some(t => t === chap || t.startsWith(chap + '/'))) return false;
         } else {
-          // Chapitre/sous-tag → sous-tag exact uniquement
-          return `EXISTS (
-            SELECT 1 FROM ExerciceTag et
-            JOIN TagTheme tt ON et.tag = tt.id_tag
-            JOIN Chapitre c ON tt.chapitre = c.id_chapitre
-            WHERE et.exercice = e.id_ex
-            AND c.nom || '/' || tt.nom = ?
-          )`;
+          // Sous-tag exact
+          if (!ex.tags.includes(tag)) return false;
         }
-      }).join(' AND ');
+      }
+      return true;
+    });
 
-      sql = `
-        SELECT DISTINCT e.id_ex, e.date, t.nom_epreuve, e.description
-        FROM ExerciceOraux e
-        LEFT JOIN Type t ON e.type = t.id_type
-        WHERE e.utilisé = 'oui'
-        ${typeId ? 'AND e.type = ?' : ''}
-        AND ${tagConditions}
-      `;
-
-      if (typeId) params.push(typeId);
-      selectedTags.forEach(tag => {
-        params.push(tag); // un seul paramètre par tag (chapitre seul ou chapitre/sous-tag)
-      });
-    }
-
-    const orderBy = sort === 'date_asc' ? 'e.date ASC' : sort === 'id' ? 'e.id_ex ASC' : 'e.date DESC';
-    sql += ` ORDER BY ${orderBy}`;
-
-    let results = query(sql, params);
-
-    // Filtre par recherche fuzzy si une description est saisie
-    if (fuzzyIds !== null) {
-      results = results.filter(r => fuzzyIds.has(r.id_ex));
-    }
+    // Tri
+    if (sort === 'date_asc') results.sort((a, b) => a.date - b.date);
+    else if (sort === 'id') results.sort((a, b) => a.id - b.id);
+    else results.sort((a, b) => b.date - a.date);
 
     renderResults(results);
-  }
-
-  function getTagsForExercice(id_ex) {
-    return query(`
-      SELECT c.nom as chapitre, tt.nom as soustag
-      FROM ExerciceTag et
-      JOIN TagTheme tt ON et.tag = tt.id_tag
-      JOIN Chapitre c ON tt.chapitre = c.id_chapitre
-      WHERE et.exercice = ?
-      ORDER BY c.nom, tt.nom
-    `, [id_ex]);
   }
 
   function renderResults(results) {
@@ -621,18 +538,14 @@
     }
 
     results.forEach(ex => {
-      const tags = getTagsForExercice(ex.id_ex);
-      const tagHtml = tags.map(t =>
-        `<span class="exercise-tag">${t.chapitre}${t.soustag ? '/' + t.soustag : ''}</span>`
-      ).join('');
-
+      const tagHtml = ex.tags.map(t => `<span class="exercise-tag">${t}</span>`).join('');
       const card = document.createElement('div');
       card.className = 'exercise-card';
       card.innerHTML = `
-        <div class="exercise-id">${ex.id_ex}</div>
+        <div class="exercise-id">${ex.id}</div>
         <div class="exercise-body">
           <div class="exercise-meta">
-            <span class="exercise-type">${ex.nom_epreuve || '—'}</span>
+            <span class="exercise-type">${ex.type || '—'}</span>
             <span class="exercise-year">${ex.date || '—'}</span>
           </div>
           <div class="exercise-desc">${ex.description || '<em style="color:var(--muted)">Sans description</em>'}</div>
@@ -646,12 +559,15 @@
   // Événements
   document.getElementById('type-select').addEventListener('change', search);
   document.getElementById('sort-select').addEventListener('change', search);
-  document.getElementById('desc-input').addEventListener('input', search);
+  document.getElementById('desc-input').addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(search, 300);
+  });
 
   // Initialisation
   (async () => {
     try {
-      await loadDatabase();
+      await loadData();
       initFuse();
       initFilters();
       document.getElementById('loading').style.display = 'none';
