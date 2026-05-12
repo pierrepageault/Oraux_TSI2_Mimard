@@ -1,0 +1,43 @@
+{
+  "types": [
+    "CCINP",
+    "CCINP (Questions ouvertes)",
+    "CCS1",
+    "CCS2",
+    "IMT"
+  ],
+  "chapitres": [
+    "Algorithmique numérique",
+    "Bases de la programmation",
+    "Compléments d'algèbre linéaire",
+    "Déterminants",
+    "Espaces préhilbertiens et euclidiens",
+    "Fonctions de plusieurs variables",
+    "Fonctions vectorielles et courbes paramétrées",
+    "Graphes",
+    "Intégration sur un intervalle quelconque",
+    "Probabilités",
+    "Réduction des endomorphismes",
+    "Structures de données",
+    "Séries de Fourier",
+    "Séries entières",
+    "Séries numériques",
+    "Équations différentielles linéaires"
+  ],
+  "exercices": [
+    {
+      "id": 213,
+      "date": 2025,
+      "type": "CCINP",
+      "description": "Formule de Stirling via une série des différences.",
+      "tags": [
+        "Algorithmique numérique/suites",
+        "Bases de la programmation/fonctions récursives",
+        "Fonctions de plusieurs variables/limite et continuité",
+        "Séries numériques/convergence absolue",
+        "Séries numériques/critères de comparaison",
+        "Séries numériques/sommes partielles"
+      ]
+    }
+  ]
+}
