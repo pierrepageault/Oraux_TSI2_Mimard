@@ -374,7 +374,7 @@
   function initFuse() {
     fuse = new Fuse(data.exercices, {
       keys: ['description'],
-      threshold: 0.4,
+      threshold: 0.2,
       minMatchCharLength: 3,
       ignoreLocation: true,
     });
@@ -393,15 +393,7 @@
 
     // Tags pour autocomplétion (chapitres + sous-tags)
     const chapitres = data.chapitres.map(c => ({ label: c, value: c, type: 'chapitre' }));
-    const soustags = [];
-    data.exercices.forEach(ex => {
-      ex.tags.forEach(tag => {
-        if (tag.includes('/') && !soustags.find(t => t.value === tag)) {
-          soustags.push({ label: tag, value: tag, type: 'sous-tag' });
-        }
-      });
-    });
-    soustags.sort((a, b) => a.label.localeCompare(b.label));
+    const soustags = data.soustags.map(s => ({ label: s, value: s, type: 'sous-tag' }));
     allTags = [...chapitres, ...soustags];
   }
 
@@ -477,7 +469,12 @@
     selectedTags.forEach(tag => {
       const chip = document.createElement('span');
       chip.className = 'tag-chip';
-      chip.innerHTML = `${tag}<button onclick="removeTag(this.parentElement.textContent.trim().slice(0,-1))" title="Retirer">×</button>`;
+      const btn = document.createElement('button');
+      btn.textContent = '×';
+      btn.title = 'Retirer';
+      btn.addEventListener('click', () => removeTag(tag));
+      chip.textContent = tag;
+      chip.appendChild(btn);
       container.insertBefore(chip, tagInput);
     });
   }
